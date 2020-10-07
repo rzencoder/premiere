@@ -1,8 +1,18 @@
 import React from "react";
-import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages/home";
 
 function App() {
-  return <div>App component</div>;
+  return (
+    <div>
+      <Switch>
+        <Route path="/sign-in">Sign In</Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
