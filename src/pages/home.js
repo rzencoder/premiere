@@ -1,14 +1,14 @@
 import React from "react";
-import { Jumbotron } from "../components";
 import JumbotronContainer from "../containers/jumbotron";
-import logo from "../logo.png";
+import AboutContainer from "../containers/about";
+import FooterContainer from "../containers/footer";
 
 export default function Home() {
   return (
     <>
       <JumbotronContainer />
-      <Jumbotron.Divider />
-      <div style={{ height: "400px", background: "#ee5104" }}></div>
+      <AboutContainer />
+      <FooterContainer />
     </>
   );
 }
