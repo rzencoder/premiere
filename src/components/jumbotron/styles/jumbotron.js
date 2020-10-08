@@ -65,6 +65,9 @@ export const CallToAction = styled.button`
   border: none;
   padding: 0.5em 2em;
   font-weight: 700;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Divider = styled.div`

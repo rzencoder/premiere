@@ -9,6 +9,7 @@ import {
   Text,
   CallToAction,
 } from "./styles/jumbotron";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Jumbotron({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -41,8 +42,13 @@ Jumbotron.Text = function JumbotronText({ children, ...restProps }) {
 };
 
 Jumbotron.CallToAction = function JumbotronCallToAction({
+  to,
   children,
   ...restProps
 }) {
-  return <CallToAction {...restProps}>{children}</CallToAction>;
+  return (
+    <ReactRouterLink to={to}>
+      <CallToAction {...restProps}>{children}</CallToAction>
+    </ReactRouterLink>
+  );
 };
