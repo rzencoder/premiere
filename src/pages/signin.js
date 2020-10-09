@@ -1,19 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import FooterContainer from "../containers/footer";
 import { Form } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";
 import { validateCredentials } from "../helpers/form";
+import { FirebaseContext } from "../context/firebase";
 
 export default function SignIn() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const { firebase } = useContext(FirebaseContext);
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    return firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => {
+        setEmail("");
+        setPassword("");
+        setError(error.message);
+      });
   };
 
-  const enableSubmit = validateCredentials(username, password);
+  const enableSubmit = validateCredentials(email, password);
 
   return (
     <>
@@ -22,14 +39,16 @@ export default function SignIn() {
         <Form.Frame>
           <Form.Content method="POST" onSubmit={handleSubmit}>
             <Form.Title>Sign In</Form.Title>
-            <Form.Label>Username</Form.Label>
+            {error && <Form.Error>{error}</Form.Error>}
+            <Form.Label>Email Address</Form.Label>
             <Form.Input
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
+              value={email}
+              onChange={({ target }) => setEmail(target.value)}
             ></Form.Input>
             <Form.Label>Password</Form.Label>
             <Form.Input
               value={password}
+              type="password"
               onChange={({ target }) => setPassword(target.value)}
             ></Form.Input>
             <Form.Submit disabled={!enableSubmit} type="submit">

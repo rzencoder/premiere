@@ -11,6 +11,7 @@ import {
   Frame,
   Text,
   Link,
+  Error,
 } from "./styles/form";
 
 export default function Form({ children, ...restProps }) {
@@ -55,4 +56,8 @@ Form.Link = function FormLink({ to, children, ...restProps }) {
       <Link {...restProps}>{children}</Link>
     </ReactRouterLink>
   );
+};
+
+Form.Error = function FormError({ children, ...restProps }) {
+  return <Error {...restProps}>{children}</Error>;
 };

@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
 import "normalize.css";
 import "./index.css";
 import App from "./App";
+import { FirebaseContext } from "./context/firebase";
+import { firebase } from "./lib/firebase.prod";
 
 ReactDOM.render(
-  <Router>
+  <FirebaseContext.Provider value={{ firebase }}>
     <App />
-  </Router>,
+  </FirebaseContext.Provider>,
   document.getElementById("root")
 );

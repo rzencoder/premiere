@@ -89,3 +89,11 @@ export const Text = styled.div`
   color: white;
   font-size: 14px;
 `;
+
+export const Error = styled.div`
+  background: #c10b0b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+`;

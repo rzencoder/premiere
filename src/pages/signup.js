@@ -1,20 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import FooterContainer from "../containers/footer";
 import { Form } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";
 import { validateCredentials } from "../helpers/form";
+import { useHistory } from "react-router-dom";
+import { FirebaseContext } from "../context/firebase";
 
 export default function SignUp() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
+  const [error, setError] = useState(null);
+
+  const history = useHistory();
+  const { firebase } = useContext(FirebaseContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((result) =>
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            photoURL: Math.floor(Math.random() * 8) + 1,
+          })
+          .then(() => {
+            history.push(ROUTES.BROWSE);
+          })
+      )
+      .catch((error) => {
+        setFirstName("");
+        setEmail("");
+        setPassword("");
+        setError(error.message);
+      });
   };
 
-  const enableSubmit = validateCredentials(username, password);
+  const enableSubmit = validateCredentials(email, password);
 
   return (
     <>
@@ -23,17 +48,18 @@ export default function SignUp() {
         <Form.Frame>
           <Form.Content method="POST" onSubmit={handleSubmit}>
             <Form.Title>Sign Up</Form.Title>
+            {error && <Form.Error>{error}</Form.Error>}
             <Form.Label>First Name</Form.Label>
             <Form.Input
               placeholder="Rocky"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             ></Form.Input>
-            <Form.Label>Username</Form.Label>
+            <Form.Label>Email Address</Form.Label>
             <Form.Input
-              placeholder="rockyBalboa"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
+              placeholder="rocky@balboa.com"
+              value={email}
+              onChange={({ target }) => setEmail(target.value)}
             ></Form.Input>
             <Form.Label>Password</Form.Label>
             <Form.Input
