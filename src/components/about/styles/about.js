@@ -17,7 +17,7 @@ export const Item = styled.div`
 export const Divider = styled.div`
   width: 100%;
   background: white;
-  height: 8px;
+  height: 4px;
 `;
 
 export const Title = styled.h3`

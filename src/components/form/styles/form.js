@@ -35,9 +35,11 @@ export const Content = styled.form`
   border-radius: 5px;
   width: 90%;
   margin: 50px auto;
-  max-width: 300px;
+  max-width: 400px;
   @media screen and (max-width: 400px) {
-    max-width: 220px;
+    max-width: 280px;
+    padding: 20px;
+    margin: 20px auto;
   }
 `;
 

@@ -2,8 +2,8 @@ import styled from "styled-components/macro";
 import { primaryColour, backgroundColour } from "../../../constants/styles";
 
 export const Container = styled.div`
-  background: ${backgroundColour};
-  margin: 40px;
+  background: #444;
+  padding: 40px;
 `;
 
 export const Text = styled.p`
@@ -25,7 +25,7 @@ export const Section = styled.div`
   width: 90%;
   margin: 10px auto;
   font-size: 12px;
-  color: #ddd;
+  color: #eee;
   flex-wrap: wrap;
 `;
 
