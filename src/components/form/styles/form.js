@@ -7,7 +7,7 @@ import {
 
 export const Container = styled.div`
   background: url(${({ src }) =>
-      src ? `../images/${src}.png` : "../images/misc/home-bg.jpg"})
+      src ? `../images/backgrounds/${src}.png` : "../images/backgrounds/collage.png"})
     top left / cover no-repeat;
 `;
 

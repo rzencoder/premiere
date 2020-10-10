@@ -10,12 +10,12 @@ export const Container = styled.div`
 export const Background = styled.div`
   position: relative;
   background: url(${({ src }) =>
-      src ? `../images/${src}.webp` : "../images/misc/home-bg.jpg"})
+      src ? `../images/backgrounds/${src}.png` : "../images/backgrounds/blade.png"})
     top left / cover no-repeat;
   height: 100%;
   @media (max-width: 600px) {
     background: url(${({ src }) =>
-        src ? `../images/${src}-sm.webp` : "../images/misc/home-bg.jpg"})
+        src ? `../images/backgrounds/${src}-sm.png` : "../images/backgrounds/blade-sm.png"})
       top left / cover no-repeat;
   }
 `;
