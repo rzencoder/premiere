@@ -25,7 +25,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to right,
+    110deg,
     ${backgroundColour} 40%,
     transparent 70%
   );
