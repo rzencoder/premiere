@@ -10,7 +10,6 @@ import useAuthListener from "./hooks/use-auth-listener";
 
 function App() {
   const { user } = useAuthListener();
-  console.log(user);
 
   return (
     <Router>

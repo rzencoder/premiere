@@ -86,7 +86,7 @@ export const ProfileMenu = styled.div`
 `;
 
 export const BrowseLogo = styled.img`
-  width: 10em;
+  width: 200px;
 `;
 
 export const SearchIcon = styled.img`

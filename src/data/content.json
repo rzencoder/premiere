@@ -1,0 +1,46 @@
+{
+  "films": [
+    {
+      "title": "Blade Runner 2049",
+      "genre": "Sci Fi",
+      "slug": "blade-runner-2049"
+    },
+    {
+      "title": "Inception",
+      "genre": "Sci Fi",
+      "slug": "inception"
+    },
+    {
+      "title": "Sunshine",
+      "genre": "Sci Fi",
+      "slug": "sunshine"
+    },
+    {
+      "title": "Interstellar",
+      "genre": "Sci Fi",
+      "slug": "interstellar"
+    },
+    {
+      "title": "Moon",
+      "genre": "Sci Fi",
+      "slug": "moon"
+    },
+    {
+      "title": "Step Brothers",
+      "genre": "Comedy",
+      "slug": "step-brothers"
+    }
+  ],
+  "series": [
+    {
+      "title": "Peep Show",
+      "genre": "Comedy",
+      "slug": "peep-show"
+    },
+    {
+      "title": "Breaking Bad",
+      "genre": "drama",
+      "slug": "breaking-bad"
+    }
+  ]
+}

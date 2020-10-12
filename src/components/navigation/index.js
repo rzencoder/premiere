@@ -78,7 +78,11 @@ Navigation.ProfileMenu = function NavigationProfileMenu({
 };
 
 Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
-  return <Logo {...restProps} />;
+  return (
+    <div>
+      <BrowseLogo {...restProps} />
+    </div>
+  );
 };
 
 Navigation.SearchIcon = function NavigationSearchIcon({ ...restProps }) {
