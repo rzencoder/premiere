@@ -15,6 +15,7 @@ export default function FooterContainer() {
           <Footer.Subtitle>Help</Footer.Subtitle>
           <Footer.Link href="#">Account</Footer.Link>
           <Footer.Link href="#">Pricing</Footer.Link>
+          <Footer.Link href="#">Accessibility</Footer.Link>
         </Footer.Column>
         <Footer.Column>
           <Footer.Subtitle>About</Footer.Subtitle>

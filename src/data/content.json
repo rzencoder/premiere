@@ -24,14 +24,14 @@
       "title": "Moon",
       "genre": "Sci Fi",
       "slug": "moon"
-    },
+    }
+  ],
+  "series": [
     {
       "title": "Step Brothers",
       "genre": "Comedy",
       "slug": "step-brothers"
-    }
-  ],
-  "series": [
+    },
     {
       "title": "Peep Show",
       "genre": "Comedy",

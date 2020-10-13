@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FirebaseContext } from "../context/firebase";
-import { Loader, Navigation, Feature } from "../components";
+import { Loader, Navigation, Feature, Library } from "../components";
 import Logo from "../logo.png";
 import axios from "axios";
 import contentData from "../data/content.json";
+import Carousel from "nuka-carousel";
+import FooterContainer from "../containers/footer";
 
 export default function Browse() {
   const { firebase } = useContext(FirebaseContext);
@@ -96,13 +98,40 @@ export default function Browse() {
           </Feature.Details>
           <Feature.Text>{feature.Plot}</Feature.Text>
           <Feature.SubText>{feature.Actors}</Feature.SubText>
-          <Feature.Button>Play</Feature.Button>
+          <Feature.Button>Watch Now</Feature.Button>
         </Feature.TextContainer>
       </Feature>
-      <div></div>
-      {contentData["films"].map((item) => {
-        return <div onClick={() => setSelectedFeature(item)}>{item.title}</div>;
-      })}
+      <Library>
+        <Library.Divider />
+        <Library.CarouselContainer>
+          <Library.CarouselGroup>
+            <Carousel
+              slidesToShow={4}
+              wrapAround={true}
+              renderCenterLeftControls={({ previousSlide }) => (
+                <Library.CarouselButton onClick={previousSlide}>
+                  {"<"}
+                </Library.CarouselButton>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <Library.CarouselButton onClick={nextSlide}>
+                  {">"}
+                </Library.CarouselButton>
+              )}
+            >
+              {contentData["films"].map((item) => {
+                return (
+                  <Library.Image
+                    src={`../images/content/${item.slug}-poster.png`}
+                    onClick={() => setSelectedFeature(item)}
+                  />
+                );
+              })}
+            </Carousel>
+          </Library.CarouselGroup>
+        </Library.CarouselContainer>
+      </Library>
+      <FooterContainer />
     </>
   );
 }
