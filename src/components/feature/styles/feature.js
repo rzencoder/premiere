@@ -90,3 +90,21 @@ export const Divider = styled.div`
   height: 15px;
   background: linear-gradient(0deg, #222, #181818);
 `;
+
+export const AgeRating = styled.img`
+  width: 35px;
+`;
+
+export const Rating = styled.div`
+  ${({ color }) => color && `color:${color};`}
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-left: 10px;
+`;
+
+export const Year = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+`;

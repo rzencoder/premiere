@@ -9,6 +9,9 @@ import {
   Button,
   Details,
   SubText,
+  Rating,
+  AgeRating,
+  Year,
 } from "./styles/feature";
 
 export default function Feature({ children, ...restProps }) {
@@ -48,4 +51,24 @@ Feature.Details = function FeatureDetails({ children, ...restProps }) {
 
 Feature.SubText = function FeatureSubText({ children, ...restProps }) {
   return <SubText {...restProps}>{children}</SubText>;
+};
+
+Feature.AgeRating = function FeatureAgeRating({ ...restProps }) {
+  return <AgeRating {...restProps} />;
+};
+
+Feature.Year = function FeatureYear({ children, ...restProps }) {
+  return (
+    <Year {...restProps}>
+      <div>{children}</div>
+    </Year>
+  );
+};
+
+Feature.Rating = function FeatureRating({ children, ...restProps }) {
+  return (
+    <Rating {...restProps}>
+      <div>{children}</div>
+    </Rating>
+  );
 };

@@ -17,21 +17,41 @@
     },
     {
       "title": "Interstellar",
-      "genre": "Sci Fi",
+      "genre": "Western",
       "slug": "interstellar"
     },
     {
       "title": "Moon",
-      "genre": "Sci Fi",
+      "genre": "Romance",
       "slug": "moon"
-    }
-  ],
-  "series": [
+    },
     {
       "title": "Step Brothers",
       "genre": "Comedy",
       "slug": "step-brothers"
     },
+    {
+      "title": "Bridesmaids",
+      "genre": "Comedy",
+      "slug": "bridesmaids"
+    },
+    {
+      "title": "Zoolander",
+      "genre": "Comedy",
+      "slug": "zoolander"
+    },
+    {
+      "title": "Best in Show",
+      "genre": "Comedy",
+      "slug": "best-in-show"
+    },
+    {
+      "title": "Shaun of the Dead",
+      "genre": "Comedy",
+      "slug": "shaun-of-the-dead"
+    }
+  ],
+  "series": [
     {
       "title": "Peep Show",
       "genre": "Comedy",

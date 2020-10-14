@@ -7,6 +7,10 @@ import {
   CarouselContainer,
   CarouselGroup,
   CarouselButton,
+  Selector,
+  SelectorItem,
+  CarouselOverlay,
+  Panel,
 } from "./styles/library";
 
 export default function Library({ children, ...restProps }) {
@@ -44,4 +48,27 @@ Library.CarouselButton = function LibraryCarouselButton({
   ...restProps
 }) {
   return <CarouselButton {...restProps}>{children}</CarouselButton>;
+};
+
+Library.Selector = function LibrarySelector({ children, ...restProps }) {
+  return <Selector {...restProps}>{children}</Selector>;
+};
+
+Library.SelectorItem = function LibrarySelectorItem({
+  children,
+  ...restProps
+}) {
+  return <SelectorItem {...restProps}>{children}</SelectorItem>;
+};
+
+Library.CarouselOverlay = function LibraryCarouselOverlay({ ...restProps }) {
+  return <CarouselOverlay {...restProps} />;
+};
+
+Library.Panel = function LibraryPanel({ children, ...restProps }) {
+  return (
+    <Panel {...restProps}>
+      <div>{children}</div>
+    </Panel>
+  );
 };

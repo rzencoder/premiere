@@ -17,3 +17,7 @@ body {
 a {
   text-decoration: none;
 }
+
+.slider-control-centerright {
+  z-index: 10;
+}

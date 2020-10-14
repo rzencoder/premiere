@@ -45,10 +45,14 @@ export const Section = styled.div`
 `;
 
 export const Item = styled.div`
-  color: white;
+  ${({ active }) =>
+    active
+      ? `color: white; border-bottom: 3px solid ${primaryColour};`
+      : `color: #bbb; border-bottom: none;`}
   font-weight: 600;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 5px;
 `;
 
 export const Profile = styled.div`
@@ -61,8 +65,8 @@ export const Search = styled.div`
 `;
 
 export const ProfileImage = styled.div`
-  width: 3em;
-  height: 3em;
+  width: 2.6em;
+  height: 2.6em;
   background: dodgerblue;
   border-radius: 50%;
   display: flex;
@@ -73,7 +77,7 @@ export const ProfileImage = styled.div`
 export const ProfileImageText = styled.div`
   color: white;
   text-shadow: 1px 1px 2px #222;
-  font-size: 36px;
+  font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
 `;
@@ -90,7 +94,7 @@ export const BrowseLogo = styled.img`
 `;
 
 export const SearchIcon = styled.img`
-  width: 2em;
+  width: 1.5em;
 `;
 
 export const SearchBox = styled.div`

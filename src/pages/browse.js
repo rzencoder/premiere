@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FirebaseContext } from "../context/firebase";
 import { Loader, Navigation, Feature, Library } from "../components";
+import {
+  filterGenres,
+  displayAgeRating,
+  getRatingColor,
+} from "../helpers/browse";
 import Logo from "../logo.png";
 import axios from "axios";
 import contentData from "../data/content.json";
@@ -15,13 +20,17 @@ export default function Browse() {
   const [selectedFeature, setSelectedFeature] = useState(contentData.films[0]);
   const [feature, setFeature] = useState({});
   const [storedFeatureData, setStoredFeatureData] = useState([]);
+  const [contentType, setContentType] = useState("films");
+  const [genres, setGenres] = useState(filterGenres(contentData.films));
+  const [content, setContent] = useState(contentData.films);
+  const [activeGenre, setActiveGenre] = useState("All");
 
-  // Initial one time useEffect
+  // Initial useEffect on load
   useEffect(() => {
-    console.log(selectedFeature);
-
     axios
-      .get(`http://www.omdbapi.com/?apikey=12350c73&t=${selectedFeature.title}`)
+      .get(
+        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
+      )
       .then(({ data }) => {
         setFeature(data);
         setStoredFeatureData([data, ...storedFeatureData]);
@@ -49,6 +58,24 @@ export default function Browse() {
       });
   }, [selectedFeature]);
 
+  const handleContentTypeChange = (category) => {
+    setContentType(category);
+    setSelectedFeature(contentData[category][0]);
+    setGenres(filterGenres(contentData[category]));
+    setContent(contentData[category]);
+  };
+
+  const handleGenreSelect = (genre) => {
+    setActiveGenre(genre);
+    if (genre === "All") {
+      return setContent(contentData[contentType]);
+    }
+    const filteredContent = contentData[contentType].filter(
+      (item) => item.genre === genre
+    );
+    setContent(filteredContent);
+  };
+
   if (loading) {
     return (
       <Loader>
@@ -56,58 +83,87 @@ export default function Browse() {
       </Loader>
     );
   }
-  console.log(feature);
+
   return (
     <>
       <Feature>
         <Feature.Background src={selectedFeature.slug} />
         <Feature.Overlay />
         <Navigation>
-          <Navigation.BrowseLogo src={Logo} alt="Premiere" />
+          <div>
+            <Navigation.BrowseLogo src={Logo} alt="Premiere" />
 
-          <Navigation.Section>
-            <Navigation.Item>Films</Navigation.Item>
-            <Navigation.Item>Series</Navigation.Item>
-          </Navigation.Section>
-          <Navigation.Search>
-            <Navigation.SearchBox></Navigation.SearchBox>
-            <Navigation.SearchIcon src="/images/icons/search.png" />
-          </Navigation.Search>
-          <Navigation.Profile>
-            <Navigation.ProfileImage
-              onClick={() => setOpenProfile(!openProfile)}
-            >
-              <Navigation.ProfileImageText>
-                {user.displayName[0]}
-              </Navigation.ProfileImageText>
-            </Navigation.ProfileImage>
-            <Navigation.ProfileMenu open={openProfile}>
-              <Navigation.Button onClick={() => firebase.auth().signOut()}>
-                Sign out
-              </Navigation.Button>
-            </Navigation.ProfileMenu>
-          </Navigation.Profile>
+            <Navigation.Section>
+              <Navigation.Item
+                active={contentType === "films"}
+                onClick={() => handleContentTypeChange("films")}
+              >
+                Films
+              </Navigation.Item>
+              <Navigation.Item
+                active={contentType === "series"}
+                onClick={() => handleContentTypeChange("series")}
+              >
+                Series
+              </Navigation.Item>
+            </Navigation.Section>
+          </div>
+          <div>
+            <Navigation.Search>
+              <Navigation.SearchBox></Navigation.SearchBox>
+              <Navigation.SearchIcon src="/images/icons/search.png" />
+            </Navigation.Search>
+            <Navigation.Profile>
+              <Navigation.ProfileImage
+                onClick={() => setOpenProfile(!openProfile)}
+              >
+                <Navigation.ProfileImageText>
+                  {user.displayName[0]}
+                </Navigation.ProfileImageText>
+              </Navigation.ProfileImage>
+              <Navigation.ProfileMenu open={openProfile}>
+                <Navigation.Button onClick={() => firebase.auth().signOut()}>
+                  Sign out
+                </Navigation.Button>
+              </Navigation.ProfileMenu>
+            </Navigation.Profile>
+          </div>
         </Navigation>
 
         <Feature.TextContainer>
           <Feature.Title>{feature.Title}</Feature.Title>
           <Feature.Details>
-            <div>{feature.Year}</div>
-            <div>{feature.Rated}</div>
-            <div>{feature.imdbRating}</div>
+            <Feature.Year>{feature.Year}</Feature.Year>
+            <Feature.AgeRating src={displayAgeRating(feature.Rated)} />
+            <Feature.Rating color={getRatingColor(feature.imdbRating)}>
+              {feature.imdbRating}
+            </Feature.Rating>
           </Feature.Details>
           <Feature.Text>{feature.Plot}</Feature.Text>
           <Feature.SubText>{feature.Actors}</Feature.SubText>
-          <Feature.Button>Watch Now</Feature.Button>
+          <Feature.Button>▶{"  "}Watch Now</Feature.Button>
         </Feature.TextContainer>
       </Feature>
       <Library>
         <Library.Divider />
+        <Library.Selector>
+          {genres.map((item) => (
+            <Library.SelectorItem
+              active={item === activeGenre}
+              key={item}
+              onClick={() => handleGenreSelect(item)}
+            >
+              {item}
+            </Library.SelectorItem>
+          ))}
+        </Library.Selector>
         <Library.CarouselContainer>
+          <Library.Panel>Streaming on Premiere</Library.Panel>
           <Library.CarouselGroup>
             <Carousel
               slidesToShow={4}
               wrapAround={true}
+              withoutControls={content.length <= 1}
               renderCenterLeftControls={({ previousSlide }) => (
                 <Library.CarouselButton onClick={previousSlide}>
                   {"<"}
@@ -119,7 +175,7 @@ export default function Browse() {
                 </Library.CarouselButton>
               )}
             >
-              {contentData["films"].map((item) => {
+              {content.map((item) => {
                 return (
                   <Library.Image
                     src={`../images/content/${item.slug}-poster.png`}
@@ -128,6 +184,7 @@ export default function Browse() {
                 );
               })}
             </Carousel>
+            <Library.CarouselOverlay />
           </Library.CarouselGroup>
         </Library.CarouselContainer>
       </Library>
