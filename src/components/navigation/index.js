@@ -13,6 +13,7 @@ import {
   BrowseLogo,
   SearchBox,
   SearchIcon,
+  Group,
 } from "./styles/navigation";
 import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -94,4 +95,8 @@ Navigation.SearchBox = function NavigationSearchBox({
   ...restProps
 }) {
   return <SearchBox {...restProps}>{children}</SearchBox>;
+};
+
+Navigation.Group = function NavigationGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
 };

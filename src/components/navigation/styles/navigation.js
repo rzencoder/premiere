@@ -100,3 +100,7 @@ export const SearchIcon = styled.img`
 export const SearchBox = styled.div`
   width: 15em;
 `;
+
+export const Group = styled.div`
+  display: flex;
+`;
