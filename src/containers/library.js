@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Library } from "../components";
-import { filterGenres } from "../helpers/browse";
 import contentData from "../data/content.json";
 import Carousel from "nuka-carousel";
 
@@ -24,6 +23,63 @@ export default function LibraryContainer({
     setContent(filteredContent);
   };
 
+  const size = useWindowSize();
+
+  function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+
+      height: undefined,
+    });
+
+    useEffect(() => {
+      // Handler to call on window resize
+
+      function handleResize() {
+        // Set window width/height to state
+
+        setWindowSize({
+          width: window.innerWidth,
+
+          height: window.innerHeight,
+        });
+      }
+
+      // Add event listener
+
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+
+      handleResize();
+
+      // Remove event listener on cleanup
+
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+
+    return windowSize;
+  }
+
+  const slidesToShow = () => {
+    switch (true) {
+      case size.width > 900:
+        return 5;
+      case size.width > 750:
+        return 4;
+      case size.width > 600:
+        return 3;
+      case size.width > 450:
+        return 2;
+      default:
+        return 1;
+    }
+  };
+
   return (
     <Library>
       <Library.Divider />
@@ -42,7 +98,7 @@ export default function LibraryContainer({
         <Library.Panel>Streaming on Premiere</Library.Panel>
         <Library.CarouselGroup>
           <Carousel
-            slidesToShow={4}
+            slidesToShow={slidesToShow()}
             wrapAround={true}
             withoutControls={content.length <= 1}
             renderCenterLeftControls={({ previousSlide }) => (

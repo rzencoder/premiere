@@ -9,6 +9,7 @@ export default function FeatureContainer({
   selectedFeature,
   contentType,
   handleContentTypeChange,
+  setSearchValue,
 }) {
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
@@ -33,11 +34,9 @@ export default function FeatureContainer({
     const savedFeature = storedFeatureData.filter(
       (item) => item.Title === selectedFeature.title
     );
-    console.log(savedFeature);
     if (savedFeature.length !== 0) {
       return setFeature(savedFeature[0]);
     }
-    console.log("api");
     axios
       .get(`http://www.omdbapi.com/?apikey=12350c73&t=${selectedFeature.title}`)
       .then(({ data }) => {
@@ -72,7 +71,11 @@ export default function FeatureContainer({
           </Navigation.Group>
           <Navigation.Group>
             <Navigation.Search>
-              <Navigation.SearchBox></Navigation.SearchBox>
+              <Navigation.SearchBox>
+                <input
+                  onChange={({ target }) => setSearchValue(target.value)}
+                />
+              </Navigation.SearchBox>
               <Navigation.SearchIcon src="/images/icons/search.png" />
             </Navigation.Search>
             <Navigation.Profile>

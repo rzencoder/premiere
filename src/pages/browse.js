@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Loader, Library } from "../components";
+import Fuse from "fuse.js";
+import { Loader } from "../components";
 import { filterGenres } from "../helpers/browse";
 import contentData from "../data/content.json";
-import Carousel from "nuka-carousel";
 import FooterContainer from "../containers/footer";
 import FeatureContainer from "../containers/feature";
 import LibraryContainer from "../containers/library";
@@ -14,6 +14,7 @@ export default function Browse() {
   const [genres, setGenres] = useState(filterGenres(contentData.films));
   const [activeGenre, setActiveGenre] = useState("All");
   const [content, setContent] = useState(contentData.films);
+  const [searchValue, setSearchValue] = useState("");
 
   // Initial useEffect on load
   useEffect(() => {
@@ -21,6 +22,20 @@ export default function Browse() {
       setLoading(false);
     }, 2500);
   }, []);
+
+  useEffect(() => {
+    const fuse = new Fuse(content, {
+      keys: ["title", "genre"],
+      threshold: 0.4,
+    });
+    const results = fuse.search(searchValue).map(({ item }) => item);
+
+    if (content.length > 0 && searchValue.length >= 3 && results.length > 0) {
+      setContent(results);
+    } else {
+      setContent(contentData[contentType]);
+    }
+  }, [searchValue]);
 
   const handleContentTypeChange = (category) => {
     setContentType(category);
@@ -43,6 +58,7 @@ export default function Browse() {
         selectedFeature={selectedFeature}
         contentType={contentType}
         handleContentTypeChange={handleContentTypeChange}
+        setSearchValue={setSearchValue}
       />
       <LibraryContainer
         activeGenre={activeGenre}

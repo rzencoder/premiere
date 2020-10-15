@@ -51,7 +51,11 @@ Library.CarouselButton = function LibraryCarouselButton({
 };
 
 Library.Selector = function LibrarySelector({ children, ...restProps }) {
-  return <Selector {...restProps}>{children}</Selector>;
+  return (
+    <Selector {...restProps}>
+      <div>{children}</div>
+    </Selector>
+  );
 };
 
 Library.SelectorItem = function LibrarySelectorItem({

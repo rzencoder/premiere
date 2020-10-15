@@ -35,7 +35,6 @@ export const Background = styled.div`
 
 export const Image = styled.img`
   width: 150px;
-  height: 222px;
   transform: skewX(-3deg);
   padding: 0 10px;
   border-radius: 10px;
@@ -68,11 +67,17 @@ export const CarouselButton = styled.button`
   padding: 5px 10px;
   margin: 10px;
   font-size: 30px;
+  cursor: pointer;
 `;
 
 export const Selector = styled.div`
   display: flex;
-  margin: 20px 20px 20px 300px;
+  justify-content: flex-end;
+  margin: 20px 0;
+  > div {
+    display: flex;
+    width: 74%;
+  }
 `;
 
 export const SelectorItem = styled.div`
@@ -83,6 +88,7 @@ export const SelectorItem = styled.div`
   font-weight: 600;
   font-size: 20px;
   padding: 10px 20px;
+  cursor: pointer;
 `;
 
 export const CarouselOverlay = styled.div`
@@ -106,7 +112,7 @@ export const Panel = styled.div`
   transform: skewX(-3deg);
   > div {
     color: white;
-    font-size: 30px;
+    font-size: 1.5em;
     font-weight: 600;
     padding: 20px;
     margin-bottom: 20px;
