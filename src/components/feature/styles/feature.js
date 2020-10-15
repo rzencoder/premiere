@@ -73,6 +73,7 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   font-size: 1em;
+  line-height: 1.3em;
 `;
 
 export const Button = styled.button`

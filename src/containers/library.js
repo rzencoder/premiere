@@ -69,11 +69,11 @@ export default function LibraryContainer({
     switch (true) {
       case size.width > 900:
         return 5;
-      case size.width > 750:
+      case size.width > 620:
         return 4;
-      case size.width > 600:
+      case size.width > 470:
         return 3;
-      case size.width > 450:
+      case size.width > 350:
         return 2;
       default:
         return 1;
@@ -81,49 +81,51 @@ export default function LibraryContainer({
   };
 
   return (
-    <Library>
+    <>
       <Library.Divider />
-      <Library.Selector>
-        {genres.map((item) => (
-          <Library.SelectorItem
-            active={item === activeGenre}
-            key={item}
-            onClick={() => handleGenreSelect(item)}
-          >
-            {item}
-          </Library.SelectorItem>
-        ))}
-      </Library.Selector>
-      <Library.CarouselContainer>
-        <Library.Panel>Streaming on Premiere</Library.Panel>
-        <Library.CarouselGroup>
-          <Carousel
-            slidesToShow={slidesToShow()}
-            wrapAround={true}
-            withoutControls={content.length <= 1}
-            renderCenterLeftControls={({ previousSlide }) => (
-              <Library.CarouselButton onClick={previousSlide}>
-                {"<"}
-              </Library.CarouselButton>
-            )}
-            renderCenterRightControls={({ nextSlide }) => (
-              <Library.CarouselButton onClick={nextSlide}>
-                {">"}
-              </Library.CarouselButton>
-            )}
-          >
-            {content.map((item) => {
-              return (
-                <Library.Image
-                  src={`../images/content/${item.slug}-poster.png`}
-                  onClick={() => setSelectedFeature(item)}
-                />
-              );
-            })}
-          </Carousel>
-          <Library.CarouselOverlay />
-        </Library.CarouselGroup>
-      </Library.CarouselContainer>
-    </Library>
+      <Library>
+        <Library.Selector>
+          {genres.map((item) => (
+            <Library.SelectorItem
+              active={item === activeGenre}
+              key={item}
+              onClick={() => handleGenreSelect(item)}
+            >
+              {item}
+            </Library.SelectorItem>
+          ))}
+        </Library.Selector>
+        <Library.CarouselContainer>
+          <Library.Panel>Streaming on Premiere</Library.Panel>
+          <Library.CarouselGroup>
+            <Carousel
+              slidesToShow={slidesToShow()}
+              wrapAround={true}
+              withoutControls={content.length <= 1}
+              renderCenterLeftControls={({ previousSlide }) => (
+                <Library.CarouselButton onClick={previousSlide}>
+                  {"<"}
+                </Library.CarouselButton>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <Library.CarouselButton onClick={nextSlide}>
+                  {">"}
+                </Library.CarouselButton>
+              )}
+            >
+              {content.map((item) => {
+                return (
+                  <Library.Image
+                    src={`../images/content/${item.slug}-poster.png`}
+                    onClick={() => setSelectedFeature(item)}
+                  />
+                );
+              })}
+            </Carousel>
+            <Library.CarouselOverlay show={content.length > 4} />
+          </Library.CarouselGroup>
+        </Library.CarouselContainer>
+      </Library>
+    </>
   );
 }

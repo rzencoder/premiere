@@ -49,3 +49,9 @@ export const Column = styled.div`
   flex-direction: column;
   margin-right: 60px;
 `;
+
+export const Break = styled.div`
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(0deg, #444, #353535);
+`;

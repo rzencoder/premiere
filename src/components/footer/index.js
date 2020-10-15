@@ -8,6 +8,7 @@ import {
   Divider,
   Row,
   Column,
+  Break,
 } from "./styles/footer";
 
 export default function Footer({ children, ...restProps }) {
@@ -40,4 +41,8 @@ Footer.Row = function FooterRow({ children, ...restProps }) {
 
 Footer.Column = function FooterColumn({ children, ...restProps }) {
   return <Column {...restProps}>{children}</Column>;
+};
+
+Footer.Break = function FooterBreak({ ...restProps }) {
+  return <Break {...restProps} />;
 };
