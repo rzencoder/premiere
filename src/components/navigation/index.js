@@ -14,6 +14,8 @@ import {
   SearchBox,
   SearchIcon,
   Group,
+  ProfileTitle,
+  ProfileText,
 } from "./styles/navigation";
 import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -80,9 +82,9 @@ Navigation.ProfileMenu = function NavigationProfileMenu({
 
 Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
   return (
-    <div>
-      <BrowseLogo {...restProps} />
-    </div>
+    <BrowseLogo>
+      <img {...restProps} />
+    </BrowseLogo>
   );
 };
 
@@ -90,13 +92,24 @@ Navigation.SearchIcon = function NavigationSearchIcon({ ...restProps }) {
   return <SearchIcon {...restProps} />;
 };
 
-Navigation.SearchBox = function NavigationSearchBox({
-  children,
-  ...restProps
-}) {
-  return <SearchBox {...restProps}>{children}</SearchBox>;
+Navigation.SearchBox = function NavigationSearchBox({ ...restProps }) {
+  return <SearchBox {...restProps} />;
 };
 
 Navigation.Group = function NavigationGroup({ children, ...restProps }) {
   return <Group {...restProps}>{children}</Group>;
+};
+
+Navigation.ProfileTitle = function NavigationProfileTitle({
+  children,
+  ...restProps
+}) {
+  return <ProfileTitle {...restProps}>{children}</ProfileTitle>;
+};
+
+Navigation.ProfileText = function NavigationProfileText({
+  children,
+  ...restProps
+}) {
+  return <ProfileText {...restProps}>{children}</ProfileText>;
 };

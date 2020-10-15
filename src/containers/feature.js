@@ -10,12 +10,14 @@ export default function FeatureContainer({
   contentType,
   handleContentTypeChange,
   setSearchValue,
+  searchValue,
 }) {
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
   const [openProfile, setOpenProfile] = useState(false);
   const [feature, setFeature] = useState({});
   const [storedFeatureData, setStoredFeatureData] = useState([]);
+  const [showSearchBar, setShowSearchBar] = useState(false);
 
   // Initial useEffect on load
   useEffect(() => {
@@ -71,14 +73,19 @@ export default function FeatureContainer({
           </Navigation.Group>
           <Navigation.Group>
             <Navigation.Search>
-              <Navigation.SearchBox>
-                <input
-                  onChange={({ target }) => setSearchValue(target.value)}
-                />
-              </Navigation.SearchBox>
-              <Navigation.SearchIcon src="/images/icons/search.png" />
+              <Navigation.SearchBox
+                open={showSearchBar}
+                value={searchValue}
+                onChange={({ target }) => setSearchValue(target.value)}
+              />
+              <Navigation.SearchIcon
+                onClick={() =>
+                  setShowSearchBar((showSearchBar) => !showSearchBar)
+                }
+                src="/images/icons/search.png"
+              />
             </Navigation.Search>
-            <Navigation.Profile>
+            <Navigation.Profile open={openProfile}>
               <Navigation.ProfileImage
                 onClick={() => setOpenProfile(!openProfile)}
               >
@@ -87,9 +94,17 @@ export default function FeatureContainer({
                 </Navigation.ProfileImageText>
               </Navigation.ProfileImage>
               <Navigation.ProfileMenu open={openProfile}>
-                <Navigation.Button onClick={() => firebase.auth().signOut()}>
-                  Sign out
-                </Navigation.Button>
+                <Navigation.ProfileTitle>
+                  {`${user.displayName}'s Account`}
+                </Navigation.ProfileTitle>
+                <Navigation.ProfileText>Billing</Navigation.ProfileText>
+                <Navigation.ProfileText>Settings</Navigation.ProfileText>
+                <Navigation.ProfileText>Help</Navigation.ProfileText>
+                <Navigation.ProfileText
+                  onClick={() => firebase.auth().signOut()}
+                >
+                  Sign Out
+                </Navigation.ProfileText>
               </Navigation.ProfileMenu>
             </Navigation.Profile>
           </Navigation.Group>

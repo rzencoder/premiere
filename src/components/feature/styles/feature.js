@@ -6,14 +6,20 @@ import {
 } from "../../../constants/styles";
 
 export const Container = styled.div`
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
   @media screen and (min-width: 300px) {
     font-size: calc(12px + 6 * ((100vw - 300px) / 700));
   }
   @media screen and (min-width: 1000px) {
     font-size: 18px;
   }
-  height: 500px;
-  position: relative;
+  @media screen and (max-width: 700px) {
+    justify-content: space-between;
+  }
 `;
 
 export const Background = styled.div`
@@ -24,12 +30,11 @@ export const Background = styled.div`
     top right / cover no-repeat;
   height: 100%;
   width: 70%;
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     background: url(${({ src }) =>
-        src
-          ? `../images/content/${src}-sm.png`
-          : "../images/content/blade-sm.png"})
-      top left / cover no-repeat;
+        src ? `../images/content/${src}.png` : "../images/content/blade.png"})
+      center / cover no-repeat;
+    width: 100%;
   }
 `;
 
@@ -38,14 +43,27 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(110deg, ${backgroundColour} 40%, transparent 70%);
+  @media screen and (max-width: 950px) {
+    background: linear-gradient(
+      110deg,
+      ${backgroundColour} 45%,
+      transparent 70%
+    );
+    @media screen and (max-width: 700px) {
+      background: linear-gradient(0deg, rgb(34, 34, 34), rgba(34, 34, 34, 0.3));
+    }
+  }
 `;
 
 export const TextContainer = styled.div`
   position: relative;
-  z-index: 2;
   color: white;
-  width: 40%;
+  width: 45%;
   margin: 30px 0 0 50px;
+  @media screen and (max-width: 700px) {
+    width: 80%;
+    margin: 0 0 30px 30px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -92,7 +110,7 @@ export const Divider = styled.div`
 `;
 
 export const AgeRating = styled.img`
-  width: 35px;
+  width: 2em;
 `;
 
 export const Rating = styled.div`

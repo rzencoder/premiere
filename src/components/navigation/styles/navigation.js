@@ -19,6 +19,9 @@ export const Container = styled.div`
   @media screen and (max-width: 400px) {
     padding: 20px 10px 10px;
   }
+  @media screen and (max-width: 550px) {
+    align-items: flex-start;
+  }
 `;
 
 export const Button = styled.button`
@@ -45,23 +48,16 @@ export const Section = styled.div`
 `;
 
 export const Item = styled.div`
-  ${({ active }) =>
-    active
-      ? `color: white; border-bottom: 3px solid ${primaryColour};`
-      : `color: #bbb; border-bottom: none;`}
+  ${({ active }) => (active ? `color: white;` : `color: #bbb;`)}
   font-weight: 600;
   font-size: 20px;
   margin: 0 10px;
-  padding: 5px;
+  padding: 8px 5px 5px 5px;
+  cursor: pointer;
 `;
 
 export const Profile = styled.div`
   position: relative;
-`;
-
-export const Search = styled.div`
-  display: flex;
-  justify-content: flex-end;
 `;
 
 export const ProfileImage = styled.div`
@@ -72,6 +68,9 @@ export const ProfileImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
 `;
 
 export const ProfileImageText = styled.div`
@@ -83,24 +82,103 @@ export const ProfileImageText = styled.div`
 `;
 
 export const ProfileMenu = styled.div`
-  ${({ open }) => (open ? `display: flex;` : `display: none;`)}
+  display:flex;
+  right: -30px;
+  opacity:  ${({ open }) => (open === true ? `1;` : `0;`)}
+  z-index:  ${({ open }) => (open === true ? `4;` : `-1;`)}
+  top:  -30px;
   position: absolute;
-  right: 0;
-  top: 60px;
+  transition: all 0.5s;
+  flex-direction: column;
+  background: rgba(20, 20, 20, 0.75);
+  color: #ddd;
+  width: 200px;
+  height: 500px;
+  padding: 20px;
+  @media screen and (max-width: 400px) {
+    right: -10px;
+    top: -20px;
+  }
 `;
 
-export const BrowseLogo = styled.img`
-  width: 200px;
+export const BrowseLogo = styled.div`
+  margin-right: 40px;
+  > img {
+    width: 200px;
+  }
+  @media screen and (max-width: 550px) {
+    margin-right: 30px;
+  }
+`;
+
+export const Search = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 10px;
+  @media screen and (max-width: 750px) {
+    position: absolute;
+    top: 100px;
+    right 26.5px;
+  }
+  @media screen and (max-width: 400px) {
+    right 6.5px;
+  }
 `;
 
 export const SearchIcon = styled.img`
   width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
 `;
 
-export const SearchBox = styled.div`
-  width: 15em;
+export const SearchBox = styled.input`
+  background: rgba(20, 20, 20, 0.6);
+  border: none;
+  margin: 0 10px;
+  width: ${({ open }) => (open === true ? "10em" : "0px")};
+  opacity: ${({ open }) => (open === true ? "1" : "0")};
+  transition: all 0.3s;
+  padding: 5px 10px;
+  color: #ddd;
+  border-radius: 5px;
 `;
 
 export const Group = styled.div`
   display: flex;
+  @media screen and (max-width: 550px) {
+    &:first-child {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    &:last-child {
+      align-items: flex-end;
+      flex-direction: column-reverse;
+    }
+  }
+`;
+
+export const ProfileTitle = styled.div`
+  display: flex;
+  padding-top: 65px;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid orange;
+  color: white;
+  margin-bottom: 15px;
+`;
+
+export const ProfileText = styled.div`
+  display: flex;
+  font-size: 18px;
+  padding: 5px;
+  &:last-child {
+    border-top: 1px solid #aaa;
+    padding: 10px 5px;
+    margin: 20px 0;
+    cursor: pointer;
+  }
 `;

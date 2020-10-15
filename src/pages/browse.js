@@ -23,6 +23,7 @@ export default function Browse() {
     }, 2500);
   }, []);
 
+  // Search function
   useEffect(() => {
     const fuse = new Fuse(content, {
       keys: ["title", "genre"],
@@ -59,6 +60,7 @@ export default function Browse() {
         contentType={contentType}
         handleContentTypeChange={handleContentTypeChange}
         setSearchValue={setSearchValue}
+        searchValue={searchValue}
       />
       <LibraryContainer
         activeGenre={activeGenre}
