@@ -3,7 +3,10 @@ import { primaryColour, backgroundColour } from "../../../constants/styles";
 
 export const Container = styled.div`
   background: #444;
-  padding: 40px;
+  padding: 10px 40px 20px;
+  @media screen and (max-width: 500px) {
+    padding: 10px 20px 20px;
+  }
 `;
 
 export const Text = styled.p`
@@ -48,6 +51,9 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 60px;
+  @media screen and (max-width: 500px) {
+    margin-right: 20px;
+  }
 `;
 
 export const Break = styled.div`

@@ -58,9 +58,24 @@
       "slug": "peep-show"
     },
     {
-      "title": "Breaking Bad",
-      "genre": "drama",
-      "slug": "breaking-bad"
+      "title": "Community",
+      "genre": "Comedy",
+      "slug": "community"
+    },
+    {
+      "title": "I'm Alan Partridge",
+      "genre": "Comedy",
+      "slug": "im-alan-partridge"
+    },
+    {
+      "title": "Flight of the Conchords",
+      "genre": "Comedy",
+      "slug": "flight-of-the-conchords"
+    },
+    {
+      "title": "Arrested Development",
+      "genre": "Comedy",
+      "slug": "arrested-development"
     }
   ]
 }

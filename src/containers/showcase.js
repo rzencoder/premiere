@@ -5,7 +5,6 @@ import * as ROUTES from "../constants/routes";
 export default function ShowcaseContainer() {
   return (
     <Showcase>
-      <Showcase.Divider grey />
       <Showcase.Section>
         <Showcase.ImageContainer>
           <Showcase.ImageColumn>
@@ -73,7 +72,6 @@ export default function ShowcaseContainer() {
       <Showcase.Section>
         <Showcase.Button to={ROUTES.SIGNUP}>Try it Now</Showcase.Button>
       </Showcase.Section>
-      <Showcase.Divider />
     </Showcase>
   );
 }

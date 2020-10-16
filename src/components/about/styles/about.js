@@ -16,12 +16,13 @@ export const Item = styled.div`
 
 export const Divider = styled.div`
   width: 100%;
-  background: white;
-  height: 4px;
+  background: linear-gradient(0deg, ${primaryColour}, #953405);
+  height: 10px;
+  transform: ${({ rotate }) => (rotate ? `rotate(180deg);` : `none;`)};
 `;
 
 export const Title = styled.h3`
-  font-size: 34px;
+  font-size: 28px;
   color: white;
   text-align: center;
   padding: 10px;
@@ -31,10 +32,10 @@ export const Title = styled.h3`
 export const Text = styled.p`
   color: ${backgroundColour};
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 `;
 
 export const Icon = styled.img`
-  width: 11em;
+  width: 130px;
 `;

@@ -50,7 +50,12 @@ export const Overlay = styled.div`
       transparent 70%
     );
     @media screen and (max-width: 700px) {
-      background: linear-gradient(0deg, rgb(34, 34, 34), rgba(34, 34, 34, 0.3));
+      background: linear-gradient(
+        0deg,
+        rgb(34, 34, 34),
+        rgba(34, 34, 34, 0.3),
+        rgba(34, 34, 34, 0.85)
+      );
     }
   }
 `;
