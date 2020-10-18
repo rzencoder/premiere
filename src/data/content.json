@@ -2,80 +2,150 @@
   "films": [
     {
       "title": "Blade Runner 2049",
-      "genre": "Sci Fi",
+      "genre": ["Action", "Drama", "Mystery"],
       "slug": "blade-runner-2049"
     },
     {
       "title": "Inception",
-      "genre": "Sci Fi",
+      "genre": ["Action", "Sci Fi"],
       "slug": "inception"
     },
     {
+      "title": "500 Days of Summer",
+      "genre": ["Comedy", "Romance", "Drama"],
+      "slug": "days-of-summer"
+    },
+    {
       "title": "Sunshine",
-      "genre": "Sci Fi",
+      "genre": ["Sci Fi"],
       "slug": "sunshine"
     },
     {
+      "title": "Amélie",
+      "genre": ["Comedy", "Romance"],
+      "slug": "amelie"
+    },
+    {
       "title": "Interstellar",
-      "genre": "Western",
+      "genre": ["Sci Fi", "Drama"],
       "slug": "interstellar"
     },
     {
-      "title": "Moon",
-      "genre": "Romance",
-      "slug": "moon"
+      "title": "Shaun of the Dead",
+      "genre": ["Comedy"],
+      "slug": "shaun-of-the-dead"
     },
     {
-      "title": "Step Brothers",
-      "genre": "Comedy",
-      "slug": "step-brothers"
+      "title": "Back to the Future",
+      "genre": ["Comedy", "Sci Fi"],
+      "slug": "back-to-the-future"
     },
+
     {
       "title": "Bridesmaids",
-      "genre": "Comedy",
+      "genre": ["Comedy", "Romance"],
       "slug": "bridesmaids"
     },
     {
       "title": "Zoolander",
-      "genre": "Comedy",
+      "genre": ["Comedy"],
       "slug": "zoolander"
     },
     {
-      "title": "Best in Show",
-      "genre": "Comedy",
-      "slug": "best-in-show"
+      "title": "Pulp Fiction",
+      "genre": ["Drama"],
+      "slug": "pulp-fiction"
     },
     {
-      "title": "Shaun of the Dead",
-      "genre": "Comedy",
-      "slug": "shaun-of-the-dead"
+      "title": "Best in Show",
+      "genre": ["Comedy"],
+      "slug": "best-in-show"
+    },
+
+    {
+      "title": "Moon",
+      "genre": ["Sci Fi", "Drama", "Mystery"],
+      "slug": "moon"
+    },
+    {
+      "title": "Step Brothers",
+      "genre": ["Comedy"],
+      "slug": "step-brothers"
+    },
+    {
+      "title": "Pan's Labyrinth",
+      "genre": ["Fantasy", "Drama"],
+      "slug": "pans-labyrinth"
     }
   ],
   "series": [
     {
-      "title": "Peep Show",
-      "genre": "Comedy",
-      "slug": "peep-show"
+      "title": "Twin Peaks",
+      "genre": ["Drama", "Crime"],
+      "slug": "twin-peaks"
     },
     {
       "title": "Community",
-      "genre": "Comedy",
+      "genre": ["Comedy"],
       "slug": "community"
     },
     {
-      "title": "I'm Alan Partridge",
-      "genre": "Comedy",
-      "slug": "im-alan-partridge"
+      "title": "The Wire",
+      "genre": ["Drama"],
+      "slug": "the-wire"
     },
     {
-      "title": "Flight of the Conchords",
-      "genre": "Comedy",
-      "slug": "flight-of-the-conchords"
+      "title": "Peep Show",
+      "genre": ["Comedy"],
+      "slug": "peep-show"
+    },
+    {
+      "title": "The Sopranos",
+      "genre": ["Drama", "Crime"],
+      "slug": "the-sopranos"
     },
     {
       "title": "Arrested Development",
-      "genre": "Comedy",
+      "genre": ["Comedy"],
       "slug": "arrested-development"
+    },
+    {
+      "title": "Black Mirror",
+      "genre": ["Drama", "Sci Fi"],
+      "slug": "black-mirror"
+    },
+    {
+      "title": "Spongebob Squarepants",
+      "genre": ["Children"],
+      "slug": "spongebob"
+    },
+    {
+      "title": "Flight of the Conchords",
+      "genre": ["Comedy"],
+      "slug": "flight-of-the-conchords"
+    },
+
+    {
+      "title": "Breaking Bad",
+      "genre": ["Drama", "Crime"],
+      "slug": "breaking-bad"
+    },
+    {
+      "title": "I'm Alan Partridge",
+      "genre": ["Comedy"],
+      "slug": "im-alan-partridge"
+    },
+
+    {
+      "title": "Westworld",
+      "genre": ["Drama", "Sci Fi"],
+      "slug": "westworld"
+    },
+
+    {
+      "title": "Dora the Explorer",
+      "genre": ["Children"],
+      "slug": "dora-the-explorer"
     }
   ]
 }

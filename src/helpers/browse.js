@@ -1,6 +1,7 @@
 export function filterGenres(data) {
   const genres = [...new Set(data.map((item) => item.genre))];
-  return ["All", ...genres].sort();
+  const genresSet = [...new Set(genres.flat())].sort();
+  return ["All", ...genresSet];
 }
 
 export function displayAgeRating(rating) {
@@ -9,10 +10,13 @@ export function displayAgeRating(rating) {
     case "PG-13":
       return `${path}12a.png`;
     case "PG":
+    case "TV-PG":
       return `${path}pg.png`;
     case "R":
+    case "TV-14":
       return `${path}15.png`;
     case "NC-17":
+    case "TV-MA":
       return `${path}18.png`;
     default:
       return `${path}universal.png`;
@@ -30,7 +34,6 @@ const ratingColors = [
 
 export function getRatingColor(data) {
   const rating = parseFloat(data);
-  console.log(rating);
   switch (true) {
     case rating > 8.5:
       return ratingColors[0];

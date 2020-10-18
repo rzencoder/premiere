@@ -26,13 +26,15 @@ export const Background = styled.div`
   position: absolute;
   right: 0;
   background: url(${({ src }) =>
-      src ? `../images/content/${src}.png` : "../images/content/blade.png"})
+      src ? `../images/content/${src}.jpg` : "../images/content/blade.jpg"})
     top right / cover no-repeat;
   height: 100%;
   width: 70%;
   @media (max-width: 700px) {
     background: url(${({ src }) =>
-        src ? `../images/content/${src}.png` : "../images/content/blade.png"})
+        src
+          ? `../images/content/${src}-sm.jpg`
+          : "../images/content/blade.jpg"})
       center / cover no-repeat;
     width: 100%;
   }
@@ -65,9 +67,12 @@ export const TextContainer = styled.div`
   color: white;
   width: 45%;
   margin: 30px 0 0 50px;
+  @media screen and (max-width: 1100px) {
+    width: 50%;
+  }
   @media screen and (max-width: 700px) {
     width: 80%;
-    margin: 0 0 30px 30px;
+    margin: 0 0 0 30px;
   }
 `;
 

@@ -162,7 +162,7 @@ export const Group = styled.div`
 
 export const ProfileTitle = styled.div`
   display: flex;
-  padding-top: 65px;
+  padding-top: 80px;
   font-weight: 600;
   font-size: 20px;
   padding-bottom: 5px;

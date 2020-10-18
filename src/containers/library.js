@@ -17,8 +17,8 @@ export default function LibraryContainer({
     if (genre === "All") {
       return setContent(contentData[contentType]);
     }
-    const filteredContent = contentData[contentType].filter(
-      (item) => item.genre === genre
+    const filteredContent = contentData[contentType].filter((item) =>
+      item.genre.includes(genre)
     );
     setContent(filteredContent);
   };
@@ -102,6 +102,7 @@ export default function LibraryContainer({
               slidesToShow={slidesToShow()}
               wrapAround={true}
               withoutControls={content.length <= 1}
+              renderBottomCenterControls={null}
               renderCenterLeftControls={({ previousSlide }) => (
                 <Library.CarouselButton onClick={previousSlide}>
                   {"<"}
@@ -116,7 +117,7 @@ export default function LibraryContainer({
               {content.map((item) => {
                 return (
                   <Library.Image
-                    src={`../images/content/${item.slug}-poster.png`}
+                    src={`../images/content/${item.slug}-poster.jpg`}
                     onClick={() => setSelectedFeature(item)}
                   />
                 );

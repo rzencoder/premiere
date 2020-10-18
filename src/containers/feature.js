@@ -40,7 +40,9 @@ export default function FeatureContainer({
       return setFeature(savedFeature[0]);
     }
     axios
-      .get(`http://www.omdbapi.com/?apikey=12350c73&t=${selectedFeature.title}`)
+      .get(
+        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
+      )
       .then(({ data }) => {
         setFeature(data);
         setStoredFeatureData([data, ...storedFeatureData]);
@@ -113,7 +115,11 @@ export default function FeatureContainer({
         <Feature.TextContainer>
           <Feature.Title>{feature.Title}</Feature.Title>
           <Feature.Details>
-            <Feature.Year>{feature.Year}</Feature.Year>
+            <Feature.Year>
+              {feature.totalSeasons
+                ? feature.totalSeasons + " Seasons"
+                : feature.Year}
+            </Feature.Year>
             <Feature.AgeRating src={displayAgeRating(feature.Rated)} />
             <Feature.Rating color={getRatingColor(feature.imdbRating)}>
               {feature.imdbRating}
