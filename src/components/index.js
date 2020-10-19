@@ -7,3 +7,4 @@ export { default as Showcase } from "./showcase";
 export { default as Loader } from "./loader";
 export { default as Feature } from "./feature";
 export { default as Library } from "./library";
+export { default as Profile } from "./profile";
