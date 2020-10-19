@@ -49,21 +49,24 @@ export default function SignUp() {
           <Form.Content method="POST" onSubmit={handleSubmit}>
             <Form.Title>Sign Up</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
-            <Form.Label>First Name</Form.Label>
+            <Form.Label htmlFor="name">First Name</Form.Label>
             <Form.Input
               placeholder="Rocky"
+              id="name"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             ></Form.Input>
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label htmlFor="email">Email Address</Form.Label>
             <Form.Input
               placeholder="rocky@balboa.com"
+              id="email"
               value={email}
               onChange={({ target }) => setEmail(target.value)}
             ></Form.Input>
-            <Form.Label>Password</Form.Label>
+            <Form.Label htmlFor="password">Password</Form.Label>
             <Form.Input
               placeholder="(Minimum 6 characters)"
+              id="password"
               type="password"
               value={password}
               onChange={({ target }) => setPassword(target.value)}

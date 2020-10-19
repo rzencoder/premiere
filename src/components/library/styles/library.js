@@ -98,7 +98,8 @@ export const Selector = styled.div`
   }
 `;
 
-export const SelectorItem = styled.div`
+export const SelectorItem = styled.button`
+  border: none;
   ${({ active }) =>
     active
       ? `color: white; border-bottom: 3px solid ${primaryColour};`
@@ -107,6 +108,7 @@ export const SelectorItem = styled.div`
   font-size: 1.2em;
   padding: 10px 20px;
   cursor: pointer;
+  background: none;
   &:hover {
     color: ${({ active }) => (active ? `#fff;` : `#ddd;`)};
   }

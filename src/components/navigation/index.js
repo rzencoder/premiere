@@ -15,7 +15,7 @@ import {
   SearchIcon,
   Group,
   ProfileTitle,
-  ProfileText,
+  ProfileLink,
 } from "./styles/navigation";
 import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -107,9 +107,9 @@ Navigation.ProfileTitle = function NavigationProfileTitle({
   return <ProfileTitle {...restProps}>{children}</ProfileTitle>;
 };
 
-Navigation.ProfileText = function NavigationProfileText({
+Navigation.ProfileLink = function NavigationProfileLink({
   children,
   ...restProps
 }) {
-  return <ProfileText {...restProps}>{children}</ProfileText>;
+  return <ProfileLink {...restProps}>{children}</ProfileLink>;
 };

@@ -79,17 +79,28 @@ export default function FeatureContainer({
                 open={showSearchBar}
                 value={searchValue}
                 onChange={({ target }) => setSearchValue(target.value)}
+                id="search"
               />
               <Navigation.SearchIcon
                 onClick={() =>
                   setShowSearchBar((showSearchBar) => !showSearchBar)
                 }
+                tabIndex={0}
+                onKeyDown={({ keyCode }) =>
+                  keyCode === 13 &&
+                  setShowSearchBar((showSearchBar) => !showSearchBar)
+                }
                 src="/images/icons/search.png"
+                alt="Search"
               />
             </Navigation.Search>
             <Navigation.Profile open={openProfile}>
               <Navigation.ProfileImage
+                tabIndex={0}
                 onClick={() => setOpenProfile(!openProfile)}
+                onKeyDown={({ keyCode }) =>
+                  keyCode === 13 && setOpenProfile(!openProfile)
+                }
               >
                 <Navigation.ProfileImageText>
                   {user.displayName[0]}
@@ -99,14 +110,14 @@ export default function FeatureContainer({
                 <Navigation.ProfileTitle>
                   {`${user.displayName}'s Account`}
                 </Navigation.ProfileTitle>
-                <Navigation.ProfileText>Billing</Navigation.ProfileText>
-                <Navigation.ProfileText>Settings</Navigation.ProfileText>
-                <Navigation.ProfileText>Help</Navigation.ProfileText>
-                <Navigation.ProfileText
+                <Navigation.ProfileLink>Billing</Navigation.ProfileLink>
+                <Navigation.ProfileLink>Settings</Navigation.ProfileLink>
+                <Navigation.ProfileLink>Help</Navigation.ProfileLink>
+                <Navigation.ProfileLink
                   onClick={() => firebase.auth().signOut()}
                 >
                   Sign Out
-                </Navigation.ProfileText>
+                </Navigation.ProfileLink>
               </Navigation.ProfileMenu>
             </Navigation.Profile>
           </Navigation.Group>
@@ -120,7 +131,10 @@ export default function FeatureContainer({
                 ? feature.totalSeasons + " Seasons"
                 : feature.Year}
             </Feature.Year>
-            <Feature.AgeRating src={displayAgeRating(feature.Rated)} />
+            <Feature.AgeRating
+              src={displayAgeRating(feature.Rated)}
+              alt={feature.Rated}
+            />
             <Feature.Rating color={getRatingColor(feature.imdbRating)}>
               {feature.imdbRating}
             </Feature.Rating>

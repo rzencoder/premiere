@@ -40,15 +40,17 @@ export default function SignIn() {
           <Form.Content method="POST" onSubmit={handleSubmit}>
             <Form.Title>Sign In</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label htmlFor="email">Email Address</Form.Label>
             <Form.Input
               value={email}
+              id="email"
               onChange={({ target }) => setEmail(target.value)}
             ></Form.Input>
-            <Form.Label>Password</Form.Label>
+            <Form.Label htmlFor="password">Password</Form.Label>
             <Form.Input
               value={password}
               type="password"
+              id="password"
               onChange={({ target }) => setPassword(target.value)}
             ></Form.Input>
             <Form.Submit disabled={!enableSubmit} type="submit">

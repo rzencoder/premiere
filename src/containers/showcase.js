@@ -15,7 +15,7 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>Joker</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/joker.png" />
+              <Showcase.Image src="/images/showcase/joker.png" alt="joker" />
             </Showcase.ImageRow>
           </Showcase.ImageColumn>
           <Showcase.ImageColumn>
@@ -26,7 +26,7 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>Devs</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/devs.png" />
+              <Showcase.Image src="/images/showcase/devs.png" alt="devs" />
             </Showcase.ImageRow>
             <Showcase.ImageRow>
               <Showcase.ImageOverlay>
@@ -35,7 +35,10 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>Planet Earth</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/planet-earth.png" />
+              <Showcase.Image
+                src="/images/showcase/planet-earth.png"
+                alt="planet earth"
+              />
             </Showcase.ImageRow>
           </Showcase.ImageColumn>
           <Showcase.ImageColumn largerScreensOnly>
@@ -46,7 +49,10 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>Bridesmaids</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/bridesmaids.png" />
+              <Showcase.Image
+                src="/images/showcase/bridesmaids.png"
+                alt="bridesmaids"
+              />
             </Showcase.ImageRow>
             <Showcase.ImageRow>
               <Showcase.ImageOverlay>
@@ -55,7 +61,10 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>Mission Impossible</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/mission-impossible.png" />
+              <Showcase.Image
+                src="/images/showcase/mission-impossible.png"
+                alt="mission impossible"
+              />
             </Showcase.ImageRow>
             <Showcase.ImageRow>
               <Showcase.ImageOverlay>
@@ -64,7 +73,10 @@ export default function ShowcaseContainer() {
                   <Showcase.ItemName>500 Days of Summer</Showcase.ItemName>
                 </Showcase.TextContainer>
               </Showcase.ImageOverlay>
-              <Showcase.Image src="/images/showcase/summer.png" />
+              <Showcase.Image
+                src="/images/showcase/summer.png"
+                alt="500 days of summer"
+              />
             </Showcase.ImageRow>
           </Showcase.ImageColumn>
         </Showcase.ImageContainer>

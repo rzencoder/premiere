@@ -47,13 +47,15 @@ export const Section = styled.div`
   display: flex;
 `;
 
-export const Item = styled.div`
+export const Item = styled.button`
   ${({ active }) => (active ? `color: white;` : `color: #bbb;`)}
   font-weight: 600;
   font-size: 20px;
   margin: 0 10px;
   padding: 8px 5px 5px 5px;
   cursor: pointer;
+  border: none;
+  background: none;
 `;
 
 export const Profile = styled.div`
@@ -171,10 +173,13 @@ export const ProfileTitle = styled.div`
   margin-bottom: 15px;
 `;
 
-export const ProfileText = styled.div`
+export const ProfileLink = styled.button`
   display: flex;
   font-size: 18px;
   padding: 5px;
+  border: none;
+  background: none;
+  color: #ddd;
   &:last-child {
     border-top: 1px solid #aaa;
     padding: 10px 5px;

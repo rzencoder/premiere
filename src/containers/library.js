@@ -118,7 +118,11 @@ export default function LibraryContainer({
                 return (
                   <Library.Image
                     src={`../images/content/${item.slug}-poster.jpg`}
+                    alt={item.title}
                     onClick={() => setSelectedFeature(item)}
+                    onKeyDown={({ keyCode }) =>
+                      keyCode === 13 && setSelectedFeature(item)
+                    }
                   />
                 );
               })}
