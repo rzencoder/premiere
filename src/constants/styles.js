@@ -5,12 +5,12 @@ export const fontWhite = "#fff";
 export const fontGrey = "#ddd";
 
 export const userIconColours = [
-  "#b60000",
-  "#dee300",
-  "#04c000",
-  "#0070c9",
-  "#9c00cf",
-  "orange",
-  "pink",
-  "red",
+  "#1a6818",
+  "#821313",
+  "#a64b08",
+  "#938b18",
+  "#1b995e",
+  "#1886c8",
+  "#5949cc",
+  "#a43b93",
 ];

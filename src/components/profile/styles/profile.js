@@ -9,7 +9,7 @@ export const Image = styled.div`
   width: 2.6em;
   height: 2.6em;
   background: ${({ user }) =>
-    user ? userIconColours[parseInt(user) - 1] : `dodgerblue`};
+    user ? userIconColours[parseInt(user) - 1] : `#1886c8`};
   border-radius: 50%;
   display: flex;
   justify-content: center;

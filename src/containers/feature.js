@@ -16,8 +16,7 @@ export default function FeatureContainer({
   const [storedFeatureData, setStoredFeatureData] = useState([]);
   const [showSearchBar, setShowSearchBar] = useState(false);
 
-  // Initial useEffect on load
-  useEffect(() => {
+  const fetchFeature = () => {
     axios
       .get(
         `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
@@ -25,8 +24,9 @@ export default function FeatureContainer({
       .then(({ data }) => {
         setFeature(data);
         setStoredFeatureData([data, ...storedFeatureData]);
-      });
-  }, []);
+      })
+      .catch((error) => console.log(error));
+  };
 
   // Api call when new film chosen
   useEffect(() => {
@@ -36,17 +36,9 @@ export default function FeatureContainer({
     if (savedFeature.length !== 0) {
       return setFeature(savedFeature[0]);
     }
-    axios
-      .get(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
-      )
-      .then(({ data }) => {
-        setFeature(data);
-        setStoredFeatureData([data, ...storedFeatureData]);
-      });
+    fetchFeature();
   }, [selectedFeature]);
 
-  console.log("render feature");
   return (
     <>
       <Feature>
@@ -55,7 +47,6 @@ export default function FeatureContainer({
         <Navigation>
           <Navigation.Group>
             <Navigation.BrowseLogo src={Logo} alt="Premiere" />
-
             <Navigation.Section>
               <Navigation.Item
                 active={contentType === "films"}

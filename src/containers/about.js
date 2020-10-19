@@ -20,7 +20,7 @@ export default function AboutContainer() {
           );
         })}
       </About>
-      <About.Divider rotate />
+      <About.Divider rotate="true" />
     </>
   );
 }

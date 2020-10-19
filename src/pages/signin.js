@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import FooterContainer from "../containers/footer";
+import { FooterContainer } from "../containers/footer";
 import { Form } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";

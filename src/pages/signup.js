@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import FooterContainer from "../containers/footer";
+import { FooterContainer } from "../containers/footer";
 import { Form } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";
@@ -72,7 +72,7 @@ export default function SignUp() {
               onChange={({ target }) => setPassword(target.value)}
             ></Form.Input>
             <Form.Submit type="submit" disabled={!enableSubmit}>
-              Sign In
+              Sign Up
             </Form.Submit>
             <Form.Text>
               Already a member?{" "}

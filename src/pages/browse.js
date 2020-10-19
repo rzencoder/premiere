@@ -3,7 +3,7 @@ import Fuse from "fuse.js";
 import { Loader } from "../components";
 import { filterGenres } from "../helpers/browse";
 import contentData from "../data/content.json";
-import FooterContainer from "../containers/footer";
+import { FooterContainer } from "../containers/footer";
 import FeatureContainer from "../containers/feature";
 import LibraryContainer from "../containers/library";
 

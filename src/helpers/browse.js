@@ -51,3 +51,18 @@ export function getRatingColor(data) {
       return ratingColors[4];
   }
 }
+
+export const slidesToShow = (size) => {
+  switch (true) {
+    case size.width > 900:
+      return 5;
+    case size.width > 620:
+      return 4;
+    case size.width > 470:
+      return 3;
+    case size.width > 350:
+      return 2;
+    default:
+      return 1;
+  }
+};

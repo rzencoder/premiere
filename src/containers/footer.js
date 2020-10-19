@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "../components";
 
-export default function FooterContainer() {
+function FooterFunction() {
   return (
     <>
       <Footer.Break />
@@ -38,3 +38,5 @@ export default function FooterContainer() {
     </>
   );
 }
+
+export const FooterContainer = React.memo(FooterFunction);
