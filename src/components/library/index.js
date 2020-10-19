@@ -2,7 +2,6 @@ import React from "react";
 import {
   Container,
   Image,
-  Button,
   Divider,
   CarouselContainer,
   CarouselGroup,
@@ -16,10 +15,6 @@ import {
 export default function Library({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
-
-Library.Button = function LibraryButton({ children, ...restProps }) {
-  return <Button {...restProps}>{children}</Button>;
-};
 
 Library.Divider = function LibraryDivider({ ...restProps }) {
   return <Divider {...restProps} />;

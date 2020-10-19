@@ -1,8 +1,9 @@
 import styled from "styled-components/macro";
 import {
   primaryColour,
-  backgroundColour,
   primaryColourLight,
+  fontGrey,
+  fontWhite,
 } from "../../../constants/styles";
 
 export const Container = styled.div`
@@ -29,7 +30,7 @@ export const Button = styled.button`
   font-size: 1em;
   padding: 10px 20px;
   border-radius: 4px;
-  color: white;
+  color: ${fontWhite};
   border: none;
   font-weight: 700;
   transition: background 0.3s;
@@ -56,51 +57,6 @@ export const Item = styled.button`
   cursor: pointer;
   border: none;
   background: none;
-`;
-
-export const Profile = styled.div`
-  position: relative;
-`;
-
-export const ProfileImage = styled.div`
-  width: 2.6em;
-  height: 2.6em;
-  background: dodgerblue;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 5;
-`;
-
-export const ProfileImageText = styled.div`
-  color: white;
-  text-shadow: 1px 1px 2px #222;
-  font-size: 28px;
-  text-transform: uppercase;
-  font-weight: 700;
-`;
-
-export const ProfileMenu = styled.div`
-  display:flex;
-  right: -30px;
-  opacity:  ${({ open }) => (open === true ? `1;` : `0;`)}
-  z-index:  ${({ open }) => (open === true ? `4;` : `-1;`)}
-  top:  -30px;
-  position: absolute;
-  transition: all 0.5s;
-  flex-direction: column;
-  background: rgba(20, 20, 20, 0.75);
-  color: #ddd;
-  width: 200px;
-  height: 500px;
-  padding: 20px;
-  @media screen and (max-width: 400px) {
-    right: -10px;
-    top: -20px;
-  }
 `;
 
 export const BrowseLogo = styled.div`
@@ -142,7 +98,7 @@ export const SearchBox = styled.input`
   opacity: ${({ open }) => (open === true ? "1" : "0")};
   transition: all 0.3s;
   padding: 5px 10px;
-  color: #ddd;
+  color: ${fontGrey};
   border-radius: 5px;
 `;
 
@@ -159,31 +115,5 @@ export const Group = styled.div`
       align-items: flex-end;
       flex-direction: column-reverse;
     }
-  }
-`;
-
-export const ProfileTitle = styled.div`
-  display: flex;
-  padding-top: 80px;
-  font-weight: 600;
-  font-size: 20px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid orange;
-  color: white;
-  margin-bottom: 15px;
-`;
-
-export const ProfileLink = styled.button`
-  display: flex;
-  font-size: 18px;
-  padding: 5px;
-  border: none;
-  background: none;
-  color: #ddd;
-  &:last-child {
-    border-top: 1px solid #aaa;
-    padding: 10px 5px;
-    margin: 20px 0;
-    cursor: pointer;
   }
 `;

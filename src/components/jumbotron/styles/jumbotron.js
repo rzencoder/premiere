@@ -1,5 +1,9 @@
 import styled from "styled-components/macro";
-import { primaryColour, backgroundColour } from "../../../constants/styles";
+import {
+  primaryColour,
+  backgroundColour,
+  fontWhite,
+} from "../../../constants/styles";
 
 export const Container = styled.div`
   @media screen and (min-width: 300px) {
@@ -10,12 +14,16 @@ export const Container = styled.div`
 export const Background = styled.div`
   position: relative;
   background: url(${({ src }) =>
-      src ? `../images/backgrounds/${src}.png` : "../images/backgrounds/blade.png"})
+      src
+        ? `../images/backgrounds/${src}.jpg`
+        : "../images/backgrounds/background.jpg"})
     top left / cover no-repeat;
   height: 100%;
   @media (max-width: 600px) {
     background: url(${({ src }) =>
-        src ? `../images/backgrounds/${src}-sm.png` : "../images/backgrounds/blade-sm.png"})
+        src
+          ? `../images/backgrounds/${src}-sm.jpg`
+          : "../images/backgrounds/background-sm.jpg"})
       top left / cover no-repeat;
   }
 `;
@@ -24,11 +32,7 @@ export const Overlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    110deg,
-    ${backgroundColour} 40%,
-    transparent 70%
-  );
+  background: linear-gradient(110deg, ${backgroundColour} 40%, transparent 70%);
 `;
 
 export const Group = styled.div`
@@ -45,21 +49,21 @@ export const Group = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: white;
+  color: ${fontWhite};
   font-size: 2.5em;
   margin-bottom: 0.5em;
 `;
 
 export const Text = styled.p`
   padding: 0.5em 0;
-  color: white;
+  color: ${fontWhite};
   font-size: 1em;
   margin: 0.5em 0 2em;
 `;
 
 export const CallToAction = styled.button`
   background: ${primaryColour};
-  color: white;
+  color: ${fontWhite};
   font-size: 1.5em;
   border-radius: 0.25em;
   border: none;
@@ -73,5 +77,5 @@ export const CallToAction = styled.button`
 export const Divider = styled.div`
   width: 100%;
   height: 10px;
-  background: white;
+  background: ${fontWhite};
 `;

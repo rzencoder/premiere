@@ -6,7 +6,6 @@ import {
   Section,
   Link,
   Divider,
-  Row,
   Column,
   Break,
 } from "./styles/footer";
@@ -33,10 +32,6 @@ Footer.Divider = function FooterDivider({ ...restProps }) {
 
 Footer.Section = function FooterSection({ children, ...restProps }) {
   return <Section {...restProps}>{children}</Section>;
-};
-
-Footer.Row = function FooterRow({ children, ...restProps }) {
-  return <Row {...restProps}>{children}</Row>;
 };
 
 Footer.Column = function FooterColumn({ children, ...restProps }) {

@@ -3,6 +3,7 @@ import {
   primaryColour,
   backgroundColour,
   primaryColourLight,
+  fontWhite,
 } from "../../../constants/styles";
 
 export const Container = styled.div`
@@ -64,7 +65,7 @@ export const Overlay = styled.div`
 
 export const TextContainer = styled.div`
   position: relative;
-  color: white;
+  color: ${fontWhite};
   width: 45%;
   margin: 30px 0 0 50px;
   @media screen and (max-width: 1100px) {
@@ -91,7 +92,7 @@ export const Button = styled.button`
   font-size: 1em;
   padding: 10px 20px;
   border-radius: 4px;
-  color: white;
+  color: ${fontWhite};
   border: none;
   font-weight: 700;
   transition: background 0.3s;

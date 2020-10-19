@@ -1,13 +1,15 @@
 import styled from "styled-components/macro";
 import {
+  fontWhite,
   primaryColour,
-  backgroundColour,
   primaryColourLight,
 } from "../../../constants/styles";
 
 export const Container = styled.div`
   background: url(${({ src }) =>
-      src ? `../images/backgrounds/${src}.png` : "../images/backgrounds/collage.png"})
+      src
+        ? `../images/backgrounds/${src}.jpg`
+        : "../images/backgrounds/collage.jpg"})
     top left / cover no-repeat;
 `;
 
@@ -18,14 +20,12 @@ export const Frame = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: white;
+  color: ${fontWhite};
   font-size: 30px;
   margin: 10px 0 20px;
   border-bottom: 2px solid ${primaryColour};
   padding: 5px 0;
 `;
-
-export const Background = styled.div``;
 
 export const Content = styled.form`
   display: flex;
@@ -44,7 +44,7 @@ export const Content = styled.form`
 `;
 
 export const Label = styled.div`
-  color: white;
+  color: ${fontWhite};
   font-size: 18px;
   font-weight: 600;
   padding: 5px 0;
@@ -62,7 +62,7 @@ export const Input = styled.input`
 
 export const Submit = styled.button`
   border: none;
-  color: white;
+  color: ${fontWhite};
   background: ${primaryColour};
   border-radius: 4px;
   padding: 10px 20px;
@@ -80,19 +80,19 @@ export const Submit = styled.button`
 `;
 
 export const Link = styled.span`
-  color: white;
+  color: ${fontWhite};
   font-weight: 600;
   font-size: 14px;
 `;
 
 export const Text = styled.div`
-  color: white;
+  color: ${fontWhite};
   font-size: 14px;
 `;
 
 export const Error = styled.div`
   background: #c10b0b;
-  color: white;
+  color: ${fontWhite};
   padding: 10px 15px;
   border-radius: 4px;
   margin-bottom: 10px;

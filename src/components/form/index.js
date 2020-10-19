@@ -3,7 +3,6 @@ import { Link as ReactRouterLink } from "react-router-dom";
 import {
   Container,
   Title,
-  Background,
   Content,
   Label,
   Input,
@@ -17,10 +16,6 @@ import {
 export default function Form({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
-
-Form.Background = function FormBackground({ children, ...restProps }) {
-  return <Background {...restProps}>{children}</Background>;
-};
 
 Form.Frame = function FormFrame({ children, ...restProps }) {
   return <Frame {...restProps}>{children}</Frame>;

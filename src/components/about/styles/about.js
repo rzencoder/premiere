@@ -1,5 +1,9 @@
 import styled from "styled-components/macro";
-import { primaryColour, backgroundColour } from "../../../constants/styles";
+import {
+  primaryColour,
+  backgroundColour,
+  fontWhite,
+} from "../../../constants/styles";
 
 export const Container = styled.div`
   background: ${primaryColour};
@@ -23,7 +27,7 @@ export const Divider = styled.div`
 
 export const Title = styled.h3`
   font-size: 28px;
-  color: white;
+  color: ${fontWhite};
   text-align: center;
   padding: 10px;
   margin: 0;

@@ -3,19 +3,13 @@ import {
   Container,
   Logo,
   Button,
-  Profile,
   Section,
   Search,
   Item,
-  ProfileImage,
-  ProfileImageText,
-  ProfileMenu,
   BrowseLogo,
   SearchBox,
   SearchIcon,
   Group,
-  ProfileTitle,
-  ProfileLink,
 } from "./styles/navigation";
 import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -47,37 +41,12 @@ Navigation.Section = function NavigationSection({ children, ...restProps }) {
   return <Section {...restProps}>{children}</Section>;
 };
 
-Navigation.Profile = function NavigationProfile({ children, ...restProps }) {
-  return <Profile {...restProps}>{children}</Profile>;
-};
-
 Navigation.Item = function NavigationItem({ children, ...restProps }) {
   return <Item {...restProps}>{children}</Item>;
 };
 
-Navigation.ProfileImage = function NavigationProfileImage({
-  children,
-  ...restProps
-}) {
-  return <ProfileImage {...restProps}>{children}</ProfileImage>;
-};
-
 Navigation.Search = function NavigationSearch({ children, ...restProps }) {
   return <Search {...restProps}>{children}</Search>;
-};
-
-Navigation.ProfileImageText = function NavigationProfileImageText({
-  children,
-  ...restProps
-}) {
-  return <ProfileImageText {...restProps}>{children}</ProfileImageText>;
-};
-
-Navigation.ProfileMenu = function NavigationProfileMenu({
-  children,
-  ...restProps
-}) {
-  return <ProfileMenu {...restProps}>{children}</ProfileMenu>;
 };
 
 Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
@@ -98,18 +67,4 @@ Navigation.SearchBox = function NavigationSearchBox({ ...restProps }) {
 
 Navigation.Group = function NavigationGroup({ children, ...restProps }) {
   return <Group {...restProps}>{children}</Group>;
-};
-
-Navigation.ProfileTitle = function NavigationProfileTitle({
-  children,
-  ...restProps
-}) {
-  return <ProfileTitle {...restProps}>{children}</ProfileTitle>;
-};
-
-Navigation.ProfileLink = function NavigationProfileLink({
-  children,
-  ...restProps
-}) {
-  return <ProfileLink {...restProps}>{children}</ProfileLink>;
 };

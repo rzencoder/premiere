@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { FirebaseContext } from "../context/firebase";
 import { Profile } from "../components";
 
-export default function ProfileContainer() {
+function ProfileFunction() {
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
   const [openProfile, setOpenProfile] = useState(false);
@@ -11,6 +11,7 @@ export default function ProfileContainer() {
     <Profile open={openProfile}>
       <Profile.Image
         tabIndex={0}
+        user={user.photoURL}
         onClick={() => setOpenProfile(!openProfile)}
         onKeyDown={({ keyCode }) =>
           keyCode === 13 && setOpenProfile(!openProfile)
@@ -30,3 +31,5 @@ export default function ProfileContainer() {
     </Profile>
   );
 }
+
+export const ProfileContainer = React.memo(ProfileFunction);

@@ -119,6 +119,7 @@ export default function LibraryContainer({
                   <Library.Image
                     src={`../images/content/${item.slug}-poster.jpg`}
                     alt={item.title}
+                    key={item.slug}
                     onClick={() => setSelectedFeature(item)}
                     onKeyDown={({ keyCode }) =>
                       keyCode === 13 && setSelectedFeature(item)

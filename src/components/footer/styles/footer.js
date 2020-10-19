@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { primaryColour, backgroundColour } from "../../../constants/styles";
+import { backgroundColour, fontWhite } from "../../../constants/styles";
 
 export const Container = styled.div`
   background: #444;
@@ -39,13 +39,11 @@ export const Subtitle = styled.p`
 `;
 
 export const Link = styled.a`
-  color: white;
+  color: ${fontWhite};
   text-decoration: none;
   padding: 5px;
   margin-right: 15px;
 `;
-
-export const Row = styled.div``;
 
 export const Column = styled.div`
   display: flex;

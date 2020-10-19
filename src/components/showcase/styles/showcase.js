@@ -3,6 +3,7 @@ import {
   primaryColour,
   backgroundColour,
   primaryColourLight,
+  fontWhite,
 } from "../../../constants/styles";
 
 const majorBreakPoint = "600px";
@@ -34,7 +35,7 @@ export const Button = styled.button`
   font-size: 1.5em;
   padding: 0.45em 1.4em;
   border-radius: 4px;
-  color: white;
+  color: ${fontWhite};
   border: none;
   font-weight: 700;
   transition: background 0.3s;
@@ -108,5 +109,5 @@ export const Divider = styled.div`
   width: 100%;
   height: 4px;
   ${({ grey }) =>
-    grey ? `background: ${backgroundColour};` : `background: white;`}
+    grey ? `background: ${backgroundColour};` : `background: ${fontWhite};`}
 `;

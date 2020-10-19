@@ -3,7 +3,7 @@ import { Navigation, Feature } from "../components";
 import { displayAgeRating, getRatingColor } from "../helpers/browse";
 import Logo from "../logo.png";
 import axios from "axios";
-import ProfileContainer from "./profile";
+import { ProfileContainer } from "./profile";
 
 export default function FeatureContainer({
   selectedFeature,
@@ -46,6 +46,7 @@ export default function FeatureContainer({
       });
   }, [selectedFeature]);
 
+  console.log("render feature");
   return (
     <>
       <Feature>

@@ -6,7 +6,7 @@ import NavigationContainer from "./navigation";
 export default function JumbotronContainer() {
   return (
     <Jumbotron>
-      <Jumbotron.Background src="blade">
+      <Jumbotron.Background src="background">
         <Jumbotron.Overlay />
         <NavigationContainer />
         <Jumbotron.Group>

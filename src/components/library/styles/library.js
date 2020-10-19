@@ -1,9 +1,5 @@
 import styled from "styled-components/macro";
-import {
-  primaryColour,
-  backgroundColour,
-  primaryColourLight,
-} from "../../../constants/styles";
+import { primaryColour, fontWhite } from "../../../constants/styles";
 
 export const Container = styled.div`
   margin-bottom: 50px;
@@ -46,8 +42,6 @@ export const Image = styled.img`
   }
 `;
 
-export const Button = styled.button``;
-
 export const Divider = styled.div`
   width: 100%;
   height: 15px;
@@ -74,7 +68,7 @@ export const CarouselGroup = styled.div`
 
 export const CarouselButton = styled.button`
   background: rgba(12, 12, 12, 0.3);
-  color: white;
+  color: ${fontWhite};
   border: none;
   font-weight: 700;
   padding: 5px 10px;
@@ -143,7 +137,7 @@ export const Panel = styled.div`
   box-shadow: 0 0 10px #000;
   transform: skewX(-3deg);
   > div {
-    color: white;
+    color: ${fontWhite};
     font-size: 1.5em;
     font-weight: 600;
     padding: 20px;
