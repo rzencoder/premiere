@@ -20,7 +20,7 @@ export default function FeatureContainer({
   const fetchFeature = () => {
     axios
       .get(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
+        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}=${selectedFeature.title}`
       )
       .then(({ data }) => {
         setFeature(data);
