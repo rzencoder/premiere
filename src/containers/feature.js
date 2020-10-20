@@ -38,6 +38,7 @@ export default function FeatureContainer({
       return setFeature(savedFeature[0]);
     }
     fetchFeature();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedFeature]);
 
   return (

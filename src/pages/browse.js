@@ -36,6 +36,7 @@ export default function Browse() {
     } else {
       setContent(contentData[contentType]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
   const handleContentTypeChange = (category) => {

@@ -17,6 +17,7 @@ export default function useAuthListener() {
     });
 
     return () => authListener();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { user };

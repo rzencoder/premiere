@@ -44,7 +44,7 @@ Navigation.Logo = function NavigationLogo({ to, ...restProps }) {
 Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
   return (
     <BrowseLogo>
-      <img {...restProps} />
+      <img {...restProps} alt="Premiere" />
     </BrowseLogo>
   );
 };
