@@ -46,11 +46,7 @@ export default function Browse() {
   };
 
   if (loading) {
-    return (
-      <Loader>
-        <Loader.Spinner />
-      </Loader>
-    );
+    return <Loader />;
   }
 
   return (

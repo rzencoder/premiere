@@ -17,6 +17,10 @@ export default function Navigation({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
+Navigation.Group = function NavigationGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
+};
+
 Navigation.Link = function NavigationLink({ to, children, ...restProps }) {
   return (
     <ReactRouterLink to={to} {...restProps}>
@@ -37,6 +41,14 @@ Navigation.Logo = function NavigationLogo({ to, ...restProps }) {
   );
 };
 
+Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
+  return (
+    <BrowseLogo>
+      <img {...restProps} />
+    </BrowseLogo>
+  );
+};
+
 Navigation.Section = function NavigationSection({ children, ...restProps }) {
   return <Section {...restProps}>{children}</Section>;
 };
@@ -49,22 +61,10 @@ Navigation.Search = function NavigationSearch({ children, ...restProps }) {
   return <Search {...restProps}>{children}</Search>;
 };
 
-Navigation.BrowseLogo = function NavigationBrowseLogo({ ...restProps }) {
-  return (
-    <BrowseLogo>
-      <img {...restProps} />
-    </BrowseLogo>
-  );
-};
-
 Navigation.SearchIcon = function NavigationSearchIcon({ ...restProps }) {
   return <SearchIcon {...restProps} />;
 };
 
 Navigation.SearchBox = function NavigationSearchBox({ ...restProps }) {
   return <SearchBox {...restProps} />;
-};
-
-Navigation.Group = function NavigationGroup({ children, ...restProps }) {
-  return <Group {...restProps}>{children}</Group>;
 };

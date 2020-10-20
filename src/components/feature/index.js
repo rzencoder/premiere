@@ -18,12 +18,12 @@ export default function Feature({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Feature.Background = function FeatureBackground({ children, ...restProps }) {
-  return <Background {...restProps}>{children}</Background>;
+Feature.Background = function FeatureBackground({ ...restProps }) {
+  return <Background {...restProps} />;
 };
 
-Feature.Overlay = function FeatureOverlay({ children, ...restProps }) {
-  return <Overlay {...restProps}>{children}</Overlay>;
+Feature.Overlay = function FeatureOverlay({ ...restProps }) {
+  return <Overlay {...restProps} />;
 };
 
 Feature.TextContainer = function FeatureTextContainer({

@@ -3,7 +3,6 @@ export const primaryColourLight = "#f96218";
 export const backgroundColour = "#222";
 export const fontWhite = "#fff";
 export const fontGrey = "#ddd";
-
 export const userIconColours = [
   "#1a6818",
   "#821313",

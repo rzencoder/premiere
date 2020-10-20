@@ -55,14 +55,14 @@ export default function SignUp() {
               id="name"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
-            ></Form.Input>
+            />
             <Form.Label htmlFor="email">Email Address</Form.Label>
             <Form.Input
               placeholder="rocky@balboa.com"
               id="email"
               value={email}
               onChange={({ target }) => setEmail(target.value)}
-            ></Form.Input>
+            />
             <Form.Label htmlFor="password">Password</Form.Label>
             <Form.Input
               placeholder="(Minimum 6 characters)"
@@ -70,7 +70,7 @@ export default function SignUp() {
               type="password"
               value={password}
               onChange={({ target }) => setPassword(target.value)}
-            ></Form.Input>
+            />
             <Form.Submit type="submit" disabled={!enableSubmit}>
               Sign Up
             </Form.Submit>

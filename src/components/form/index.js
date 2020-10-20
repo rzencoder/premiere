@@ -33,8 +33,8 @@ Form.Label = function FormLabel({ children, ...restProps }) {
   return <Label {...restProps}>{children}</Label>;
 };
 
-Form.Input = function FormInput({ children, ...restProps }) {
-  return <Input {...restProps}>{children}</Input>;
+Form.Input = function FormInput({ ...restProps }) {
+  return <Input {...restProps} />;
 };
 
 Form.Submit = function FormSubmit({ children, ...restProps }) {

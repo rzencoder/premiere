@@ -15,8 +15,8 @@ export default function Jumbotron({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Jumbotron.Overlay = function JumbotronOverlay({ children, ...restProps }) {
-  return <Overlay {...restProps}>{children}</Overlay>;
+Jumbotron.Overlay = function JumbotronOverlay({ ...restProps }) {
+  return <Overlay {...restProps} />;
 };
 
 Jumbotron.Group = function JumbotronGroup({ children, ...restProps }) {
@@ -26,8 +26,8 @@ Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Jumbotron.Divider = function JumbotronDivider({ children, ...restProps }) {
-  return <Divider {...restProps}>{children}</Divider>;
+Jumbotron.Divider = function JumbotronDivider({ ...restProps }) {
+  return <Divider {...restProps} />;
 };
 
 Jumbotron.Text = function JumbotronText({ children, ...restProps }) {
@@ -46,9 +46,6 @@ Jumbotron.CallToAction = function JumbotronCallToAction({
   );
 };
 
-Jumbotron.Background = function JumbotronBackground({
-  children,
-  ...restProps
-}) {
-  return <Background {...restProps}>{children}</Background>;
+Jumbotron.Background = function JumbotronBackground({ ...restProps }) {
+  return <Background {...restProps} />;
 };

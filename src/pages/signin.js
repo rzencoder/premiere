@@ -45,14 +45,14 @@ export default function SignIn() {
               value={email}
               id="email"
               onChange={({ target }) => setEmail(target.value)}
-            ></Form.Input>
+            />
             <Form.Label htmlFor="password">Password</Form.Label>
             <Form.Input
               value={password}
               type="password"
               id="password"
               onChange={({ target }) => setPassword(target.value)}
-            ></Form.Input>
+            />
             <Form.Submit disabled={!enableSubmit} type="submit">
               Sign In
             </Form.Submit>
