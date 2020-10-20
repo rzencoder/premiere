@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navigation, Feature } from "../components";
+import { Navigation, Feature, Player } from "../components";
 import { displayAgeRating, getRatingColor } from "../helpers/browse";
 import Logo from "../logo.png";
 import axios from "axios";
@@ -15,6 +15,7 @@ export default function FeatureContainer({
   const [feature, setFeature] = useState({});
   const [storedFeatureData, setStoredFeatureData] = useState([]);
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const [openPlayer, setOpenPlayer] = useState(false);
 
   const fetchFeature = () => {
     axios
@@ -105,8 +106,13 @@ export default function FeatureContainer({
           </Feature.Details>
           <Feature.Text>{feature.Plot}</Feature.Text>
           <Feature.SubText>{feature.Actors}</Feature.SubText>
-          <Feature.Button>▶{"  "}Watch Now</Feature.Button>
+          <Feature.Button onClick={() => setOpenPlayer(true)}>
+            ▶{"  "}Watch Now
+          </Feature.Button>
         </Feature.TextContainer>
+        {openPlayer && (
+          <Player setOpenPlayer={setOpenPlayer} src="/videos/placeholder.mp4" />
+        )}
       </Feature>
     </>
   );

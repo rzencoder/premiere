@@ -15,13 +15,6 @@ export default function Jumbotron({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Jumbotron.Background = function JumbotronBackground({
-  children,
-  ...restProps
-}) {
-  return <Background {...restProps}>{children}</Background>;
-};
-
 Jumbotron.Overlay = function JumbotronOverlay({ children, ...restProps }) {
   return <Overlay {...restProps}>{children}</Overlay>;
 };
@@ -51,4 +44,11 @@ Jumbotron.CallToAction = function JumbotronCallToAction({
       <CallToAction {...restProps}>{children}</CallToAction>
     </ReactRouterLink>
   );
+};
+
+Jumbotron.Background = function JumbotronBackground({
+  children,
+  ...restProps
+}) {
+  return <Background {...restProps}>{children}</Background>;
 };

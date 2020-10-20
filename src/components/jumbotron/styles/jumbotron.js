@@ -6,25 +6,10 @@ import {
 } from "../../../constants/styles";
 
 export const Container = styled.div`
+  position: relative;
+  height: 100%;
   @media screen and (min-width: 300px) {
     font-size: calc(12px + 6 * ((100vw - 300px) / 700));
-  }
-`;
-
-export const Background = styled.div`
-  position: relative;
-  background: url(${({ src }) =>
-      src
-        ? `../images/backgrounds/${src}.jpg`
-        : "../images/backgrounds/background.jpg"})
-    top left / cover no-repeat;
-  height: 100%;
-  @media (max-width: 600px) {
-    background: url(${({ src }) =>
-        src
-          ? `../images/backgrounds/${src}-sm.jpg`
-          : "../images/backgrounds/background-sm.jpg"})
-      top left / cover no-repeat;
   }
 `;
 
@@ -37,11 +22,11 @@ export const Overlay = styled.div`
 
 export const Group = styled.div`
   position: relative;
-  width: 38%;
+  width: 45%;
   padding: 1em 1em 3em;
   margin-left: 2em;
   @media (max-width: 900px) {
-    width: 55%;
+    width: 60%;
   }
   @media (max-width: 600px) {
     width: 75%;
@@ -78,4 +63,24 @@ export const Divider = styled.div`
   width: 100%;
   height: 10px;
   background: ${fontWhite};
+`;
+
+export const Background = styled.div`
+  width: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(${({ src }) =>
+      src
+        ? `../images/backgrounds/${src}.jpg`
+        : "../images/backgrounds/background.jpg"})
+    top right / cover no-repeat;
+  height: 100%;
+  @media (max-width: 600px) {
+    background: url(${({ src }) =>
+        src
+          ? `../images/backgrounds/${src}-sm.jpg`
+          : "../images/backgrounds/background-sm.jpg"})
+      top right / cover no-repeat;
+  }
 `;

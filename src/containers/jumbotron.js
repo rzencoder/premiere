@@ -6,21 +6,20 @@ import NavigationContainer from "./navigation";
 export default function JumbotronContainer() {
   return (
     <Jumbotron>
-      <Jumbotron.Background src="background">
-        <Jumbotron.Overlay />
-        <NavigationContainer />
-        <Jumbotron.Group>
-          <Jumbotron.Title>
-            Watch the latest films and series anywhere
-          </Jumbotron.Title>
-          <Jumbotron.Text>
-            Subscribe free for 30 days. Cancel anytime
-          </Jumbotron.Text>
-          <Jumbotron.CallToAction to={ROUTES.SIGNUP}>
-            Try for free
-          </Jumbotron.CallToAction>
-        </Jumbotron.Group>
-      </Jumbotron.Background>
+      <Jumbotron.Background src="background" />
+      <Jumbotron.Overlay />
+      <NavigationContainer />
+      <Jumbotron.Group>
+        <Jumbotron.Title>
+          Watch the latest films and series anywhere
+        </Jumbotron.Title>
+        <Jumbotron.Text>
+          Subscribe free for 30 days. Cancel anytime
+        </Jumbotron.Text>
+        <Jumbotron.CallToAction to={ROUTES.SIGNUP}>
+          Try for free
+        </Jumbotron.CallToAction>
+      </Jumbotron.Group>
     </Jumbotron>
   );
 }
