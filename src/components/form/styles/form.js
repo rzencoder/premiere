@@ -29,6 +29,7 @@ export const Title = styled.h2`
 
 export const Content = styled.form`
   display: flex;
+  position: relative;
   flex-direction: column;
   background: rgba(30, 30, 30, 0.7);
   padding: 40px;

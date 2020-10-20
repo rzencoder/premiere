@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { FooterContainer } from "../containers/footer";
-import { Form } from "../components";
+import { Form, Note } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";
 import { validateCredentials } from "../helpers/form";
@@ -12,6 +12,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [error, setError] = useState(null);
+  const [openNote, setOpenNote] = useState(true);
 
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
@@ -47,6 +48,14 @@ export default function SignUp() {
         <NavigationContainer />
         <Form.Frame>
           <Form.Content method="POST" onSubmit={handleSubmit}>
+            {openNote && (
+              <Note setOpenNote={setOpenNote}>
+                <Note.Text>
+                  Don't want to sign up? Use the test credentials on the sign in
+                  page
+                </Note.Text>
+              </Note>
+            )}
             <Form.Title>Sign Up</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
             <Form.Label htmlFor="name">First Name</Form.Label>

@@ -9,3 +9,4 @@ export { default as Feature } from "./feature";
 export { default as Library } from "./library";
 export { default as Profile } from "./profile";
 export { default as Player } from "./player";
+export { default as Note } from "./note";

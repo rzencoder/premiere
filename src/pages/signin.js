@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { FooterContainer } from "../containers/footer";
-import { Form } from "../components";
+import { Form, Note } from "../components";
 import NavigationContainer from "../containers/navigation";
 import * as ROUTES from "../constants/routes";
 import { validateCredentials } from "../helpers/form";
@@ -11,6 +11,7 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [openNote, setOpenNote] = useState(true);
 
   const { firebase } = useContext(FirebaseContext);
   const history = useHistory();
@@ -38,6 +39,15 @@ export default function SignIn() {
         <NavigationContainer />
         <Form.Frame>
           <Form.Content method="POST" onSubmit={handleSubmit}>
+            {openNote && (
+              <Note setOpenNote={setOpenNote}>
+                <Note.Text>
+                  Don't want to sign up? Use these credentials to test the site:
+                </Note.Text>
+                <Note.Text>t@test.com</Note.Text>
+                <Note.Text>test123</Note.Text>
+              </Note>
+            )}
             <Form.Title>Sign In</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
             <Form.Label htmlFor="email">Email Address</Form.Label>
