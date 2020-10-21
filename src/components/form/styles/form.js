@@ -17,6 +17,12 @@ export const Frame = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  > div {
+    width: 90%;
+    margin: 50px auto;
+    max-width: 400px;
+    position: relative;
+  }
 `;
 
 export const Title = styled.h2`
@@ -29,14 +35,11 @@ export const Title = styled.h2`
 
 export const Content = styled.form`
   display: flex;
-  position: relative;
+  width: 100%;
   flex-direction: column;
   background: rgba(30, 30, 30, 0.7);
   padding: 40px;
   border-radius: 5px;
-  width: 90%;
-  margin: 50px auto;
-  max-width: 400px;
   @media screen and (max-width: 400px) {
     max-width: 280px;
     padding: 20px;

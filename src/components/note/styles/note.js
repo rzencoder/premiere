@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 180px;
   padding: 20px;
   position: absolute;
-  background: #f9f950;
+  background: #e1e158;
   top: -30px;
   right: -30px;
   transform: rotate(10deg);

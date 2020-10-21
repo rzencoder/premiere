@@ -38,16 +38,16 @@ export default function SignIn() {
       <Form src="collage">
         <NavigationContainer />
         <Form.Frame>
+          {openNote && (
+            <Note setOpenNote={setOpenNote}>
+              <Note.Text>
+                Don't want to sign up? Use these credentials to test the site:
+              </Note.Text>
+              <Note.Text>t@test.com</Note.Text>
+              <Note.Text>test123</Note.Text>
+            </Note>
+          )}
           <Form.Content method="POST" onSubmit={handleSubmit}>
-            {openNote && (
-              <Note setOpenNote={setOpenNote}>
-                <Note.Text>
-                  Don't want to sign up? Use these credentials to test the site:
-                </Note.Text>
-                <Note.Text>t@test.com</Note.Text>
-                <Note.Text>test123</Note.Text>
-              </Note>
-            )}
             <Form.Title>Sign In</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
             <Form.Label htmlFor="email">Email Address</Form.Label>

@@ -18,7 +18,11 @@ export default function Form({ children, ...restProps }) {
 }
 
 Form.Frame = function FormFrame({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
+  return (
+    <Frame {...restProps}>
+      <div>{children}</div>
+    </Frame>
+  );
 };
 
 Form.Title = function FormTitle({ children, ...restProps }) {
