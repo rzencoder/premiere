@@ -36,7 +36,7 @@ export const Menu = styled.div`
   position: absolute;
   transition: all 0.5s;
   flex-direction: column;
-  background: rgba(20, 20, 20, 0.75);
+  background: rgba(20, 20, 20, 0.9);
   color: #ddd;
   width: 200px;
   height: 500px;

@@ -1,11 +1,12 @@
 import styled from "styled-components/macro";
 import {
   primaryColour,
+  primaryColourLight,
   backgroundColour,
   fontWhite,
 } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.header`
   position: relative;
   height: 100%;
   @media screen and (min-width: 300px) {
@@ -54,8 +55,10 @@ export const CallToAction = styled.button`
   border: none;
   padding: 0.5em 2em;
   font-weight: 700;
+  transition: background 0.3s;
   &:hover {
     cursor: pointer;
+    background: ${primaryColourLight};
   }
 `;
 

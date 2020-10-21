@@ -1,7 +1,7 @@
-export const primaryColour = "#ee5104";
-export const primaryColourLight = "#f96218";
+export const primaryColour = "#d2571c";
+export const primaryColourLight = "#ee5d17";
 export const backgroundColour = "#222";
-export const fontWhite = "#fff";
+export const fontWhite = "#f8f8ff";
 export const fontGrey = "#ddd";
 export const userIconColours = [
   "#1a6818",

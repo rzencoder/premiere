@@ -32,7 +32,13 @@ function FooterFunction() {
           <Footer.Link href="#">Terms of Use</Footer.Link>
           <Footer.Link href="#">Legal</Footer.Link>
           <Footer.Link href="#">Privacy Policy</Footer.Link>
-          <Footer.Link href="#">Github Repo</Footer.Link>
+          <Footer.Link
+            href="https://github.com/rzencoder/premiere"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github Repo
+          </Footer.Link>
         </Footer.Section>
       </Footer>
     </>

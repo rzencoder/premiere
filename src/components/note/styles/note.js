@@ -8,6 +8,13 @@ export const Container = styled.div`
   top: -30px;
   right: -30px;
   transform: rotate(10deg);
+  @media screen and (max-width: 500px) {
+    width: 140px;
+    font-size: 14px;
+    padding: 20px 5px 5px;
+    right: 0px;
+    top: -20px;
+  }
 `;
 
 export const Text = styled.div`

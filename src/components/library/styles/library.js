@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { primaryColour, fontWhite } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-bottom: 50px;
   @media screen and (min-width: 300px) {
     font-size: calc(12px + 6 * ((100vw - 300px) / 700));

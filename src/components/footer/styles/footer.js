@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { backgroundColour, fontWhite } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   background: #444;
   padding: 10px 40px 20px;
   @media screen and (max-width: 500px) {

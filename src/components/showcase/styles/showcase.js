@@ -8,7 +8,7 @@ import {
 
 const majorBreakPoint = "600px";
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   justify-content: space-between;
   flex-direction: column;

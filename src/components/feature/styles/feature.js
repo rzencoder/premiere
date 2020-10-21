@@ -6,7 +6,7 @@ import {
   fontWhite,
 } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.header`
   height: 500px;
   position: relative;
   display: flex;

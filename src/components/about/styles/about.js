@@ -5,7 +5,7 @@ import {
   fontWhite,
 } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.section`
   background: ${primaryColour};
   display: flex;
   justify-content: space-around;
@@ -20,7 +20,7 @@ export const Item = styled.div`
 
 export const Divider = styled.div`
   width: 100%;
-  background: linear-gradient(0deg, ${primaryColour}, #953405);
+  background: linear-gradient(0deg, ${primaryColour}, #913b12);
   height: 10px;
   transform: ${({ rotate }) => (rotate ? `rotate(180deg);` : `none;`)};
 `;

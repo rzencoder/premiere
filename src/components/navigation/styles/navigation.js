@@ -6,7 +6,7 @@ import {
   fontWhite,
 } from "../../../constants/styles";
 
-export const Container = styled.div`
+export const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
