@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Library /> hides overlay when show is false 1`] = `
+<section
+  class="library__Container-meah2n-0 laSfGJ"
+>
+  <div
+    class="library__CarouselContainer-meah2n-3 hHyGPX"
+  >
+    <div
+      class="library__Panel-meah2n-9 deXvZh"
+    >
+      <div>
+        Streaming on Premiere
+      </div>
+    </div>
+    <div
+      class="library__CarouselGroup-meah2n-4 fEGrxX"
+    >
+      <div
+        class="library__CarouselOverlay-meah2n-8 gfrAkp"
+      />
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Library /> renders <Library /> component 1`] = `
+<div
+  class="library__Divider-meah2n-2 labXmN"
+/>
+`;
+
+exports[`<Library /> renders a different style to unselected genres 1`] = `
+<section
+  class="library__Container-meah2n-0 laSfGJ"
+>
+  <div
+    class="library__Selector-meah2n-6 bhKIRv"
+  >
+    <div>
+      <button
+        class="library__SelectorItem-meah2n-7 fjYCKl"
+      >
+        Action
+      </button>
+      <button
+        class="library__SelectorItem-meah2n-7 fjYCKl"
+      >
+        Comedy
+      </button>
+      <button
+        class="library__SelectorItem-meah2n-7 fjYCKl"
+      >
+        Drama
+      </button>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Library /> shows/hides items when carousel button is pressed 1`] = `
+<section
+  class="library__Container-meah2n-0 laSfGJ"
+>
+  <div
+    class="library__CarouselContainer-meah2n-3 hHyGPX"
+  >
+    <div
+      class="library__Panel-meah2n-9 deXvZh"
+    >
+      <div>
+        Streaming on Premiere
+      </div>
+    </div>
+    <div
+      class="library__CarouselGroup-meah2n-4 fEGrxX"
+    >
+      <div
+        class="slider"
+        style="box-sizing: border-box; display: block; height: inherit; position: relative; width: 100%;"
+        tabindex="0"
+      >
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"
+          tabindex="-1"
+        >
+          Slide 2 of 5
+        </div>
+        <div
+          class="slider-frame"
+          style="box-sizing: border-box; display: block; height: 100%; margin: 0px; overflow: hidden; padding: 0px; position: relative; transform: translate3d(0, 0, 0);"
+        >
+          <ul
+            class="slider-list"
+            style="box-sizing: border-box; cursor: pointer; display: block; height: 0px; margin: 0px 0px; padding: 0px; position: relative; transform: translate3d(0px, 0px, 0); width: auto;"
+          >
+            <li
+              class="slider-slide"
+              inert="true"
+              style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+              tabindex="-1"
+            >
+              <img
+                alt="Blade Runner 2049"
+                aria-hidden="true"
+                class="library__Image-meah2n-1 dgRpm"
+                src="../images/content/blade-runner-2049-poster.jpg"
+              />
+            </li>
+            <li
+              class="slider-slide slide-visible slide-current"
+              style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+              tabindex="-1"
+            >
+              <img
+                alt="Inception"
+                aria-hidden="false"
+                class="library__Image-meah2n-1 dgRpm"
+                src="../images/content/inception-poster.jpg"
+                tabindex="0"
+              />
+            </li>
+            <li
+              class="slider-slide slide-visible"
+              inert="true"
+              style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+              tabindex="-1"
+            >
+              <img
+                alt="500 Days of Summer"
+                aria-hidden="false"
+                class="library__Image-meah2n-1 dgRpm"
+                src="../images/content/days-of-summer-poster.jpg"
+                tabindex="0"
+              />
+            </li>
+            <li
+              class="slider-slide slide-visible"
+              inert="true"
+              style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+              tabindex="-1"
+            >
+              <img
+                alt="Sunshine"
+                aria-hidden="false"
+                class="library__Image-meah2n-1 dgRpm"
+                src="../images/content/sunshine-poster.jpg"
+                tabindex="0"
+              />
+            </li>
+            <li
+              class="slider-slide slide-visible"
+              inert="true"
+              style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+              tabindex="-1"
+            >
+              <img
+                alt="Amélie"
+                aria-hidden="false"
+                class="library__Image-meah2n-1 dgRpm"
+                src="../images/content/amelie-poster.jpg"
+                tabindex="0"
+              />
+            </li>
+          </ul>
+        </div>
+        <div
+          class="slider-control-centerleft"
+          style="position: absolute; top: 50%; left: 0px; transform: translateY(-50%);"
+        >
+          <button
+            class="library__CarouselButton-meah2n-5 eZTVsX"
+          >
+            &lt;
+          </button>
+        </div>
+        <div
+          class="slider-control-centerright"
+          style="position: absolute; top: 50%; right: 0px; transform: translateY(-50%);"
+        >
+          <button
+            class="library__CarouselButton-meah2n-5 eZTVsX"
+            data-testid="carousel-right"
+          >
+            &gt;
+          </button>
+        </div>
+        <style
+          type="text/css"
+        >
+          .slider-slide &gt; img { width: 100%; display: block; }
+          .slider-slide &gt; img:focus { margin: auto; }
+        </style>
+      </div>
+      <div
+        class="library__CarouselOverlay-meah2n-8 dEQzzq"
+      />
+    </div>
+  </div>
+</section>
+`;

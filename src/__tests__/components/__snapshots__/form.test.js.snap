@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders <Form /> component 1`] = `
+<div
+  class="form__Container-keaajw-0 PVcRj"
+  src="collage"
+>
+  <div
+    class="form__Frame-keaajw-1 lifzte"
+  >
+    <div>
+      <form
+        class="form__Content-keaajw-3 hYYxnO"
+        method="POST"
+      >
+        <h2
+          class="form__Title-keaajw-2 hjqBaZ"
+        >
+          Sign In
+        </h2>
+        <div
+          class="form__Label-keaajw-4 ehqRDs"
+          for="email"
+        >
+          Email Address
+        </div>
+        <input
+          class="form__Input-keaajw-5 dUTZrO"
+          id="email"
+        />
+        <div
+          class="form__Label-keaajw-4 ehqRDs"
+          for="password"
+        >
+          Password
+        </div>
+        <input
+          class="form__Input-keaajw-5 dUTZrO"
+          id="password"
+          type="password"
+        />
+        <button
+          class="form__Submit-keaajw-6 gScWov"
+          disabled=""
+          type="submit"
+        >
+          Sign In
+        </button>
+        <div
+          class="form__Text-keaajw-8 cKjnzL"
+        >
+          New to Premiere?
+           
+          <a
+            href="/signup"
+          >
+            <span
+              class="form__Link-keaajw-7 dgBLnE"
+            >
+              Create an account
+            </span>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Form /> renders an error message 1`] = `
+<div
+  class="form__Error-keaajw-9 fQkYRf"
+>
+  The password does not match the username provided
+</div>
+`;
+
+exports[`<Form /> renders default background when none provided 1`] = `
+<div
+  class="form__Container-keaajw-0 PVcRj"
+  src=""
+>
+  <div
+    class="form__Frame-keaajw-1 lifzte"
+  >
+    <div>
+      <form
+        class="form__Content-keaajw-3 hYYxnO"
+        method="POST"
+      >
+        <h2
+          class="form__Title-keaajw-2 hjqBaZ"
+        >
+          Sign In
+        </h2>
+        <div
+          class="form__Label-keaajw-4 ehqRDs"
+          for="email"
+        >
+          Email Address
+        </div>
+        <input
+          class="form__Input-keaajw-5 dUTZrO"
+          id="email"
+        />
+        <div
+          class="form__Label-keaajw-4 ehqRDs"
+          for="password"
+        >
+          Password
+        </div>
+        <input
+          class="form__Input-keaajw-5 dUTZrO"
+          id="password"
+          type="password"
+        />
+        <button
+          class="form__Submit-keaajw-6 gScWov"
+          disabled=""
+          type="submit"
+        >
+          Sign In
+        </button>
+        <div
+          class="form__Text-keaajw-8 cKjnzL"
+        >
+          New to Premiere?
+           
+          <a
+            href="/signup"
+          >
+            <span
+              class="form__Link-keaajw-7 dgBLnE"
+            >
+              Create an account
+            </span>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

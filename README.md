@@ -9,8 +9,8 @@ https://premiere-movies.netlify.app/
 ### Usage
 
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 Runs the app in the development mode.<br />

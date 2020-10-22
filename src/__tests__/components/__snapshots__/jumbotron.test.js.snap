@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Jumbotron /> renders <Jumbotron /> component 1`] = `
+<header
+  class="jumbotron__Container-sc-7dqmrw-0 cHDQuC"
+>
+  <div
+    class="jumbotron__Background-sc-7dqmrw-6 cVfzDD"
+    src="background"
+  />
+  <div
+    class="jumbotron__Overlay-sc-7dqmrw-1 hvhfzL"
+  />
+  <div
+    class="jumbotron__Group-sc-7dqmrw-2 itqarO"
+  >
+    <h2
+      class="jumbotron__Title-sc-7dqmrw-3 hyorAV"
+    >
+      Watch the latest films and series anywhere
+    </h2>
+    <p
+      class="jumbotron__Text-sc-7dqmrw-4 jKYkFI"
+    >
+      Subscribe free for 30 days. Cancel anytime
+    </p>
+    <a
+      href="/"
+    >
+      <button
+        class="jumbotron__CallToAction-sc-7dqmrw-5 gKurut"
+      >
+        Try for free
+      </button>
+    </a>
+  </div>
+</header>
+`;
+
+exports[`<Jumbotron /> renders default background with no src 1`] = `
+<header
+  class="jumbotron__Container-sc-7dqmrw-0 cHDQuC"
+>
+  <div
+    class="jumbotron__Background-sc-7dqmrw-6 cVfzDD"
+    src=""
+  />
+  <div
+    class="jumbotron__Overlay-sc-7dqmrw-1 hvhfzL"
+  />
+  <div
+    class="jumbotron__Group-sc-7dqmrw-2 itqarO"
+  >
+    <h2
+      class="jumbotron__Title-sc-7dqmrw-3 hyorAV"
+    >
+      Watch the latest films and series anywhere
+    </h2>
+    <p
+      class="jumbotron__Text-sc-7dqmrw-4 jKYkFI"
+    >
+      Subscribe free for 30 days. Cancel anytime
+    </p>
+    <a
+      href="/"
+    >
+      <button
+        class="jumbotron__CallToAction-sc-7dqmrw-5 gKurut"
+      >
+        Try for free
+      </button>
+    </a>
+  </div>
+</header>
+`;

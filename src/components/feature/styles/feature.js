@@ -27,7 +27,9 @@ export const Background = styled.div`
   position: absolute;
   right: 0;
   background: url(${({ src }) =>
-      src ? `../images/content/${src}.jpg` : "../images/content/blade.jpg"})
+      src
+        ? `../images/content/${src}.jpg`
+        : "../images/backgrounds/collage.jpg"})
     top right / cover no-repeat;
   height: 100%;
   width: 70%;
@@ -35,7 +37,7 @@ export const Background = styled.div`
     background: url(${({ src }) =>
         src
           ? `../images/content/${src}-sm.jpg`
-          : "../images/content/blade.jpg"})
+          : "../images/backgrounds/collage.jpg"})
       center / cover no-repeat;
     width: 100%;
   }

@@ -12,7 +12,6 @@ import {
   TextContainer,
   ItemName,
   ItemTitle,
-  Divider,
 } from "./styles/showcase";
 
 export default function Showcase({ children, ...restProps }) {
@@ -73,8 +72,4 @@ Showcase.ItemTitle = function ShowcaseItemTitle({ children, ...restProps }) {
 
 Showcase.ItemName = function ShowcaseItemName({ children, ...restProps }) {
   return <ItemName {...restProps}>{children}</ItemName>;
-};
-
-Showcase.Divider = function ShowcaseDivider({ ...restProps }) {
-  return <Divider {...restProps} />;
 };

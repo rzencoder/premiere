@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About /> renders <About /> component 1`] = `
+<div
+  class="about__Divider-sc-1o0l0gv-2 fHWrFq"
+/>
+`;

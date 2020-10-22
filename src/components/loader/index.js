@@ -3,7 +3,7 @@ import { Container, Spinner } from "./styles/loader";
 
 export default function Loader({ ...restProps }) {
   return (
-    <Container>
+    <Container data-testid="loader">
       <Spinner {...restProps} />;
     </Container>
   );

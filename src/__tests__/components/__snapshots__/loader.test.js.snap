@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader/> will render <Loader/> 1`] = `
+<div
+  class="loader__Container-sc-1l4u7o8-0 fKQJKh"
+  data-testid="loader"
+>
+  <div
+    class="loader__Spinner-sc-1l4u7o8-1 bDmmAB"
+  />
+  ;
+</div>
+`;

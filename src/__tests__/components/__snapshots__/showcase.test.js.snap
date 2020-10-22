@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Showcase /> renders <Showcase /> component 1`] = `
+<section
+  class="showcase__Container-pisk77-0 kkALNk"
+>
+  <div
+    class="showcase__Section-pisk77-1 hixgH"
+  >
+    <div
+      class="showcase__ImageContainer-pisk77-3 dCYDjI"
+    >
+      <div
+        class="showcase__ImageColumn-pisk77-4 hssdqA"
+      >
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Blockbusters
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                Joker
+              </p>
+            </div>
+          </div>
+          <img
+            alt="joker"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/joker.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="showcase__ImageColumn-pisk77-4 hssdqA"
+      >
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Latest Series
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                Devs
+              </p>
+            </div>
+          </div>
+          <img
+            alt="devs"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/devs.jpg"
+          />
+        </div>
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Documentaries
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                Planet Earth
+              </p>
+            </div>
+          </div>
+          <img
+            alt="planet earth"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/planet-earth.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="showcase__ImageColumn-pisk77-4 hWFJlp"
+      >
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Comedies
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                Bridesmaids
+              </p>
+            </div>
+          </div>
+          <img
+            alt="bridesmaids"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/bridesmaids.jpg"
+          />
+        </div>
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Action
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                Mission Impossible
+              </p>
+            </div>
+          </div>
+          <img
+            alt="mission impossible"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/mission-impossible.jpg"
+          />
+        </div>
+        <div
+          class="showcase__ImageRow-pisk77-5 kaSpKw"
+        >
+          <div
+            class="showcase__ImageOverlay-pisk77-7 ihzmTn"
+          >
+            <div
+              class="showcase__TextContainer-pisk77-8 fZrCfM"
+            >
+              <p
+                class="showcase__ItemTitle-pisk77-9 GpwOU"
+              >
+                Romance
+              </p>
+              <p
+                class="showcase__ItemName-pisk77-10 fpNWmN"
+              >
+                500 Days of Summer
+              </p>
+            </div>
+          </div>
+          <img
+            alt="500 days of summer"
+            class="showcase__Image-pisk77-6 eUzvbY"
+            src="/images/showcase/summer.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="showcase__Section-pisk77-1 hixgH"
+  />
+</section>
+`;

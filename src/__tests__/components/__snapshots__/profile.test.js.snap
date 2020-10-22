@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile /> renders <Profile /> component 1`] = `
+<div
+  class="profile__Container-sc-1noxl8m-0 fJsANY"
+  open=""
+>
+  <div
+    class="profile__Image-sc-1noxl8m-1 jWcOvY"
+    tabindex="0"
+  >
+    <div
+      class="profile__ImageText-sc-1noxl8m-2 gcoGKg"
+    >
+      T
+    </div>
+  </div>
+  <div
+    class="profile__Menu-sc-1noxl8m-3 iGBBEW"
+    data-testid="profile-menu"
+    open=""
+  >
+    <div
+      class="profile__Title-sc-1noxl8m-4 gUDTQq"
+    >
+      Tester's Account
+    </div>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Billing
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Settings
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Help
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Sign Out
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Profile /> renders different style when profile closed 1`] = `
+<div
+  class="profile__Container-sc-1noxl8m-0 fJsANY"
+>
+  <div
+    class="profile__Image-sc-1noxl8m-1 ldDBkO"
+    tabindex="0"
+  >
+    <div
+      class="profile__ImageText-sc-1noxl8m-2 gcoGKg"
+    >
+      T
+    </div>
+  </div>
+  <div
+    class="profile__Menu-sc-1noxl8m-3 gzUzXn"
+    data-testid="profile-menu"
+  >
+    <div
+      class="profile__Title-sc-1noxl8m-4 gUDTQq"
+    >
+      Tester's Account
+    </div>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Billing
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Settings
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Help
+    </button>
+    <button
+      class="profile__Link-sc-1noxl8m-5 dcRoGy"
+    >
+      Sign Out
+    </button>
+  </div>
+</div>
+`;

@@ -1,7 +1,6 @@
 import styled from "styled-components/macro";
 import {
   primaryColour,
-  backgroundColour,
   primaryColourLight,
   fontWhite,
 } from "../../../constants/styles";
@@ -103,11 +102,4 @@ export const ItemName = styled.p`
   font-size: 0.7em;
   text-align: right;
   margin: 0;
-`;
-
-export const Divider = styled.div`
-  width: 100%;
-  height: 4px;
-  ${({ grey }) =>
-    grey ? `background: ${backgroundColour};` : `background: ${fontWhite};`}
 `;

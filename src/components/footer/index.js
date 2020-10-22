@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Container,
-  Text,
   Subtitle,
   Section,
   Link,
@@ -13,10 +12,6 @@ import {
 export default function Footer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
-
-Footer.Text = function FooterText({ children, ...restProps }) {
-  return <Text {...restProps}>{children}</Text>;
-};
 
 Footer.Subtitle = function FooterSubtitle({ children, ...restProps }) {
   return <Subtitle {...restProps}>{children}</Subtitle>;

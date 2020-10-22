@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feature /> renders <Feature /> component 1`] = `
+<header
+  class="feature__Container-sc-1k5uu41-0 chUkqh"
+>
+  <div
+    class="feature__Background-sc-1k5uu41-1 cHCmCc"
+    src="images/background.png"
+  />
+  <div
+    class="feature__Overlay-sc-1k5uu41-2 kQMryO"
+  />
+  <div
+    class="feature__TextContainer-sc-1k5uu41-3 KDKJa"
+  >
+    <h2
+      class="feature__Title-sc-1k5uu41-4 epWCyI"
+    >
+      Inception
+    </h2>
+    <div
+      class="feature__Details-sc-1k5uu41-7 jeLgNu"
+    >
+      <div
+        class="feature__Year-sc-1k5uu41-12 iLXQYC"
+      >
+        <div>
+          2010
+        </div>
+      </div>
+      <img
+        alt="R"
+        class="feature__AgeRating-sc-1k5uu41-10 ikNvIH"
+        src="../images/icons/15.png"
+      />
+      <div
+        class="feature__Rating-sc-1k5uu41-11 hJZlIe"
+        color="#227b08"
+      >
+        <div>
+          8.8
+        </div>
+      </div>
+    </div>
+    <p
+      class="feature__Text-sc-1k5uu41-5 kYNQDV"
+    >
+      A team tries to plant a memory into a business man
+    </p>
+    <div
+      class="feature__SubText-sc-1k5uu41-8 cFXPYU"
+    >
+      Leonardo DiCaprio
+      Ellen Page
+      Cillian Murphy
+    </div>
+    <button
+      class="feature__Button-sc-1k5uu41-6 jOhDSI"
+    >
+      ▶
+        
+      Watch Now
+    </button>
+  </div>
+</header>
+`;
+
+exports[`<Feature /> renders default background when src is blank 1`] = `
+<header
+  class="feature__Container-sc-1k5uu41-0 chUkqh"
+>
+  <div
+    class="feature__Background-sc-1k5uu41-1 hXGHEz"
+    src=""
+  />
+  <div
+    class="feature__Overlay-sc-1k5uu41-2 kQMryO"
+  />
+  <div
+    class="feature__TextContainer-sc-1k5uu41-3 KDKJa"
+  >
+    <h2
+      class="feature__Title-sc-1k5uu41-4 epWCyI"
+    >
+      Inception
+    </h2>
+    <div
+      class="feature__Details-sc-1k5uu41-7 jeLgNu"
+    >
+      <div
+        class="feature__Year-sc-1k5uu41-12 iLXQYC"
+      >
+        <div>
+          2010
+        </div>
+      </div>
+      <img
+        alt="R"
+        class="feature__AgeRating-sc-1k5uu41-10 ikNvIH"
+        src="../images/icons/15.png"
+      />
+      <div
+        class="feature__Rating-sc-1k5uu41-11 hJZlIe"
+        color="#227b08"
+      >
+        <div>
+          8.8
+        </div>
+      </div>
+    </div>
+    <p
+      class="feature__Text-sc-1k5uu41-5 kYNQDV"
+    >
+      A team tries to plant a memory into a business man
+    </p>
+    <div
+      class="feature__SubText-sc-1k5uu41-8 cFXPYU"
+    >
+      Leonardo DiCaprio
+      Ellen Page
+      Cillian Murphy
+    </div>
+    <button
+      class="feature__Button-sc-1k5uu41-6 jOhDSI"
+    >
+      ▶
+        
+      Watch Now
+    </button>
+  </div>
+</header>
+`;

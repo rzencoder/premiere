@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Note /> render <Navigation/> with feature page data 1`] = `
+<nav
+  class="navigation__Container-sc-9423gh-0 ebLQUS"
+>
+  <div
+    class="navigation__Group-sc-9423gh-9 AOqEL"
+  >
+    <div
+      class="navigation__BrowseLogo-sc-9423gh-5 cumtKo"
+    >
+      <img
+        alt="Premiere"
+        src="images/logo.png"
+      />
+    </div>
+    <div
+      class="navigation__Section-sc-9423gh-3 jblhpe"
+    >
+      <button
+        class="navigation__Item-sc-9423gh-4 cmwxa-D"
+      >
+        Films
+      </button>
+      <button
+        class="navigation__Item-sc-9423gh-4 dzZMMt"
+      >
+        Series
+      </button>
+    </div>
+  </div>
+  <div
+    class="navigation__Group-sc-9423gh-9 AOqEL"
+  >
+    <div
+      class="navigation__Search-sc-9423gh-6 ecWLfQ"
+    >
+      <input
+        class="navigation__SearchBox-sc-9423gh-8 kUDdUz"
+        id="search"
+        open=""
+      />
+      <img
+        alt="Search"
+        class="navigation__SearchIcon-sc-9423gh-7 kcjsSD"
+        src="/images/icons/search.png"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`<Note /> renders <Navigation /> component with home page data 1`] = `
+<nav
+  class="navigation__Container-sc-9423gh-0 ebLQUS"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="premiere"
+      class="navigation__Logo-sc-9423gh-2 hzGpvq"
+      src="/images/logo.png"
+    />
+  </a>
+  <a
+    href="/signin"
+  >
+    <button
+      class="navigation__Button-sc-9423gh-1 kaGUiX"
+    >
+      Sign In
+    </button>
+  </a>
+</nav>
+`;
+
+exports[`<Note /> search style to change when closed 1`] = `
+<div
+  class="navigation__Search-sc-9423gh-6 ecWLfQ"
+>
+  <input
+    class="navigation__SearchBox-sc-9423gh-8 egrHlf"
+    id="search"
+  />
+  <img
+    alt="Search"
+    class="navigation__SearchIcon-sc-9423gh-7 kcjsSD"
+    src="/images/icons/search.png"
+    tabindex="0"
+  />
+</div>
+`;

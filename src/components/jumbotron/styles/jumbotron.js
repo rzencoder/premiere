@@ -62,12 +62,6 @@ export const CallToAction = styled.button`
   }
 `;
 
-export const Divider = styled.div`
-  width: 100%;
-  height: 10px;
-  background: ${fontWhite};
-`;
-
 export const Background = styled.div`
   width: 70%;
   position: absolute;

@@ -5,7 +5,6 @@ import {
   Overlay,
   Group,
   Title,
-  Divider,
   Text,
   CallToAction,
 } from "./styles/jumbotron";
@@ -24,10 +23,6 @@ Jumbotron.Group = function JumbotronGroup({ children, ...restProps }) {
 };
 Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
-};
-
-Jumbotron.Divider = function JumbotronDivider({ ...restProps }) {
-  return <Divider {...restProps} />;
 };
 
 Jumbotron.Text = function JumbotronText({ children, ...restProps }) {

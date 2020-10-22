@@ -9,7 +9,9 @@ export default function Player({ setOpenPlayer, src }) {
         <video autoPlay controls>
           <source src={src} type="video/mp4" />
         </video>
-        <Button onClick={() => setOpenPlayer(false)}>✖</Button>
+        <Button data-testid="player-close" onClick={() => setOpenPlayer(false)}>
+          ✖
+        </Button>
       </Group>
     </Container>,
     document.body

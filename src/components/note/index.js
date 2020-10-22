@@ -4,7 +4,9 @@ import { Container, Text, Button } from "./styles/note";
 export default function Note({ setOpenNote, children, ...restProps }) {
   return (
     <Container {...restProps}>
-      <Button onClick={() => setOpenNote(false)}>✖</Button>
+      <Button data-testid="note-button" onClick={() => setOpenNote(false)}>
+        ✖
+      </Button>
       {children}
     </Container>
   );

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Note /> renders <Note /> component 1`] = `
+<div
+  class="note__Container-sc-1jneyx0-0 jyHnpb"
+>
+  <button
+    class="note__Button-sc-1jneyx0-2 fRuoJk"
+    data-testid="note-button"
+  >
+    ✖
+  </button>
+  <div
+    class="note__Text-sc-1jneyx0-1 gBygwG"
+  >
+    Don't want to sign up? Use these credentials to test the site:
+  </div>
+  <div
+    class="note__Text-sc-1jneyx0-1 gBygwG"
+  >
+    t@test.com
+  </div>
+  <div
+    class="note__Text-sc-1jneyx0-1 gBygwG"
+  >
+    test123
+  </div>
+</div>
+`;

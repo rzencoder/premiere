@@ -15,23 +15,6 @@ export const Container = styled.section`
   }
 `;
 
-export const Background = styled.div`
-  position: absolute;
-  right: 0;
-  background: url(${({ src }) =>
-      src ? `../images/content/${src}.png` : "../images/content/blade.png"})
-    top right / cover no-repeat;
-  height: 100%;
-  width: 70%;
-  @media (max-width: 600px) {
-    background: url(${({ src }) =>
-        src
-          ? `../images/content/${src}-sm.png`
-          : "../images/content/blade-sm.png"})
-      top left / cover no-repeat;
-  }
-`;
-
 export const Image = styled.img`
   width: 150px;
   transform: skewX(-3deg);

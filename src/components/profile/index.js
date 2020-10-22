@@ -25,7 +25,11 @@ Profile.ImageText = function ProfileImageText({ children, ...restProps }) {
 };
 
 Profile.Menu = function ProfileMenu({ children, ...restProps }) {
-  return <Menu {...restProps}>{children}</Menu>;
+  return (
+    <Menu data-testid="profile-menu" {...restProps}>
+      {children}
+    </Menu>
+  );
 };
 
 Profile.Image = function ProfileImage({ children, ...restProps }) {

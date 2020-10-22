@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { backgroundColour, fontWhite } from "../../../constants/styles";
+import { fontWhite } from "../../../constants/styles";
 
 export const Container = styled.footer`
   background: #444;
@@ -7,13 +7,6 @@ export const Container = styled.footer`
   @media screen and (max-width: 500px) {
     padding: 10px 20px 20px;
   }
-`;
-
-export const Text = styled.p`
-  color: ${backgroundColour};
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
 `;
 
 export const Divider = styled.div`
