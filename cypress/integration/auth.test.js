@@ -19,7 +19,7 @@ describe("Auth", () => {
     cy.get("#signin-email").type("t@test.com");
     cy.get("#signin-password").type("test123");
     cy.get("#signin-submit").click();
-    cy.contains("Streaming on Premiere", { timeout: 5000 });
+    cy.contains("Streaming on Premiere", { timeout: 8000 });
     cy.get("#sign-out").click();
     cy.contains("Subscribe free for 30 days. Cancel anytime");
   });

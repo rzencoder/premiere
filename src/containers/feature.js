@@ -50,12 +50,14 @@ export default function FeatureContainer({
           <Navigation.BrowseLogo src={Logo} alt="Premiere" />
           <Navigation.Section>
             <Navigation.Item
+              id="films-toggle"
               active={contentType === "films"}
               onClick={() => handleContentTypeChange("films")}
             >
               Films
             </Navigation.Item>
             <Navigation.Item
+              id="series-toggle"
               active={contentType === "series"}
               onClick={() => handleContentTypeChange("series")}
             >
@@ -82,6 +84,7 @@ export default function FeatureContainer({
               }
               src="/images/icons/search.png"
               alt="Search"
+              id="search-button"
             />
           </Navigation.Search>
           <ProfileContainer />

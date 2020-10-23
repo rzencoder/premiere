@@ -12,6 +12,7 @@ function ProfileFunction() {
       <Profile.Image
         tabIndex={0}
         user={user.photoURL}
+        id="open-profile"
         onClick={() => setOpenProfile(!openProfile)}
         onKeyDown={({ keyCode }) =>
           keyCode === 13 && setOpenProfile(!openProfile)
@@ -19,7 +20,7 @@ function ProfileFunction() {
       >
         <Profile.ImageText>{user.displayName[0]}</Profile.ImageText>
       </Profile.Image>
-      <Profile.Menu open={openProfile}>
+      <Profile.Menu id="profile-menu" open={openProfile}>
         <Profile.Title>{`${user.displayName}'s Account`}</Profile.Title>
         <Profile.Link>Billing</Profile.Link>
         <Profile.Link>Settings</Profile.Link>

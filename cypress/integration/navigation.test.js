@@ -30,7 +30,7 @@ describe("Navigation", () => {
     cy.get("#signin-email").type("t@test.com");
     cy.get("#signin-password").type("test123");
     cy.get("#signin-submit").click();
-    cy.contains("Streaming on Premiere");
+    cy.contains("Streaming on Premiere", { timeout: 8000 });
     cy.get("#sign-out").click();
     cy.contains("Subscribe free for 30 days. Cancel anytime");
   });
@@ -40,7 +40,7 @@ describe("Navigation", () => {
     cy.get("#signin-email").type("t@test.com");
     cy.get("#signin-password").type("test123");
     cy.get("#signin-submit").click();
-    cy.contains("Streaming on Premiere");
+    cy.contains("Streaming on Premiere", { timeout: 8000 });
     cy.visit("http://localhost:3000");
     cy.contains("Subscribe free for 30 days. Cancel anytime").should(
       "not.exist"

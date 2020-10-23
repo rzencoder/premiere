@@ -41,9 +41,12 @@ export default function Browse() {
 
   const handleContentTypeChange = (category) => {
     setContentType(category);
-    setSelectedFeature(contentData[category][0]);
-    setGenres(filterGenres(contentData[category]));
     setContent(contentData[category]);
+    setGenres(filterGenres(contentData[category]));
+    setActiveGenre("All");
+    setTimeout(() => {
+      setSelectedFeature(contentData[category][0]);
+    }, 100);
   };
 
   if (loading) {
