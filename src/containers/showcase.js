@@ -82,7 +82,9 @@ export default function ShowcaseContainer() {
         </Showcase.ImageContainer>
       </Showcase.Section>
       <Showcase.Section>
-        <Showcase.Button to={ROUTES.SIGNUP}>Try it Now</Showcase.Button>
+        <Showcase.Button id="showcase-cta" to={ROUTES.SIGNUP}>
+          Try it Now
+        </Showcase.Button>
       </Showcase.Section>
     </Showcase>
   );

@@ -24,7 +24,7 @@ function ProfileFunction() {
         <Profile.Link>Billing</Profile.Link>
         <Profile.Link>Settings</Profile.Link>
         <Profile.Link>Help</Profile.Link>
-        <Profile.Link onClick={() => firebase.auth().signOut()}>
+        <Profile.Link id="sign-out" onClick={() => firebase.auth().signOut()}>
           Sign Out
         </Profile.Link>
       </Profile.Menu>

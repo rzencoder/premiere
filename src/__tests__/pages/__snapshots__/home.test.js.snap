@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the homepage 1`] = `
+<header
+  class="jumbotron__Container-sc-7dqmrw-0 cHDQuC"
+>
+  <div
+    class="jumbotron__Background-sc-7dqmrw-6 cVfzDD"
+    src="background"
+  />
+  <div
+    class="jumbotron__Overlay-sc-7dqmrw-1 hvhfzL"
+  />
+  <nav
+    class="navigation__Container-sc-9423gh-0 ebLQUS"
+  />
+  <div
+    class="jumbotron__Group-sc-7dqmrw-2 itqarO"
+  >
+    <h2
+      class="jumbotron__Title-sc-7dqmrw-3 hyorAV"
+    >
+      Watch the latest films and series anywhere
+    </h2>
+    <p
+      class="jumbotron__Text-sc-7dqmrw-4 jKYkFI"
+    >
+      Subscribe free for 30 days. Cancel anytime
+    </p>
+  </div>
+</header>
+`;

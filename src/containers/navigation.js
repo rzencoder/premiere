@@ -6,9 +6,14 @@ import logo from "../logo.png";
 export default function NavigationContainer() {
   return (
     <Navigation>
-      <Navigation.Logo src={logo} alt="premiere" to={ROUTES.HOME} />
+      <Navigation.Logo
+        id="home-logo"
+        src={logo}
+        alt="premiere"
+        to={ROUTES.HOME}
+      />
       <Navigation.Link to={ROUTES.SIGNIN}>
-        <Navigation.Button>Sign In</Navigation.Button>
+        <Navigation.Button id="nav-signin">Sign In</Navigation.Button>
       </Navigation.Link>
     </Navigation>
   );

@@ -18,8 +18,10 @@ export function displayAgeRating(rating) {
     case "NC-17":
     case "TV-MA":
       return `${path}18.png`;
-    default:
+    case "G":
       return `${path}universal.png`;
+    default:
+      return null;
   }
 }
 const ratingColors = [

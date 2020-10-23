@@ -16,7 +16,7 @@ export default function JumbotronContainer() {
         <Jumbotron.Text>
           Subscribe free for 30 days. Cancel anytime
         </Jumbotron.Text>
-        <Jumbotron.CallToAction to={ROUTES.SIGNUP}>
+        <Jumbotron.CallToAction id="jumbotron-cta" to={ROUTES.SIGNUP}>
           Try for free
         </Jumbotron.CallToAction>
       </Jumbotron.Group>

@@ -57,11 +57,14 @@ export default function SignUp() {
               </Note>
             )}
             <Form.Title>Sign Up</Form.Title>
-            {error && <Form.Error>{error}</Form.Error>}
+            {error && (
+              <Form.Error data-testid="signup-error">{error}</Form.Error>
+            )}
             <Form.Label htmlFor="name">First Name</Form.Label>
             <Form.Input
               placeholder="Rocky"
               id="name"
+              data-testid="signup-name"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             />
@@ -69,6 +72,7 @@ export default function SignUp() {
             <Form.Input
               placeholder="rocky@balboa.com"
               id="email"
+              data-testid="signup-email"
               value={email}
               onChange={({ target }) => setEmail(target.value)}
             />
@@ -76,16 +80,23 @@ export default function SignUp() {
             <Form.Input
               placeholder="(Minimum 6 characters)"
               id="password"
+              data-testid="signup-password"
               type="password"
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit type="submit" disabled={!enableSubmit}>
+            <Form.Submit
+              type="submit"
+              data-testid="signup-submit"
+              disabled={!enableSubmit}
+            >
               Sign Up
             </Form.Submit>
             <Form.Text>
               Already a member?{" "}
-              <Form.Link to={ROUTES.SIGNIN}>Sign in now</Form.Link>
+              <Form.Link id="signup-link-to-signin" to={ROUTES.SIGNIN}>
+                Sign in now
+              </Form.Link>
             </Form.Text>
           </Form.Content>
         </Form.Frame>

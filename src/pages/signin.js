@@ -49,26 +49,39 @@ export default function SignIn() {
           )}
           <Form.Content method="POST" onSubmit={handleSubmit}>
             <Form.Title>Sign In</Form.Title>
-            {error && <Form.Error>{error}</Form.Error>}
-            <Form.Label htmlFor="email">Email Address</Form.Label>
+            {error && (
+              <Form.Error id="signin-error" data-testid="signin-error">
+                {error}
+              </Form.Error>
+            )}
+            <Form.Label htmlFor="signin-email">Email Address</Form.Label>
             <Form.Input
               value={email}
-              id="email"
+              id="signin-email"
+              data-testid="signin-email"
               onChange={({ target }) => setEmail(target.value)}
             />
-            <Form.Label htmlFor="password">Password</Form.Label>
+            <Form.Label htmlFor="signin-password">Password</Form.Label>
             <Form.Input
               value={password}
               type="password"
-              id="password"
+              data-testid="signin-password"
+              id="signin-password"
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={!enableSubmit} type="submit">
+            <Form.Submit
+              disabled={!enableSubmit}
+              type="submit"
+              data-testid="signin-submit"
+              id="signin-submit"
+            >
               Sign In
             </Form.Submit>
             <Form.Text>
               New to Premiere?{" "}
-              <Form.Link to={ROUTES.SIGNUP}>Create an account</Form.Link>
+              <Form.Link id="signin-link-to-signup" to={ROUTES.SIGNUP}>
+                Create an account
+              </Form.Link>
             </Form.Text>
           </Form.Content>
         </Form.Frame>

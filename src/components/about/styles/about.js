@@ -5,7 +5,7 @@ import {
   fontWhite,
 } from "../../../constants/styles";
 
-export const Container = styled.section`
+export const Container = styled.div`
   background: ${primaryColour};
   display: flex;
   justify-content: space-around;
